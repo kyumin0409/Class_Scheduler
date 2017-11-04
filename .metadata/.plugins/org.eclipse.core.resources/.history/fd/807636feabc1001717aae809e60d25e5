@@ -9,8 +9,8 @@ public class Person{
 	public Person(Major major, HashMap<CourseNum,Course> coursesTaken, HashMap<CourseNum,Course> classesToTake){
 		
 		maj = major;
-		this.coursesTaken =coursesTaken;
-		this.classesToTake = classesToTake;
+		coursesTaken = new HashMap<CourseNum,Course>();
+		classesToTake = new HashMap<CourseNum,Course>();
 	}
 
 	public Major getMajor(){
