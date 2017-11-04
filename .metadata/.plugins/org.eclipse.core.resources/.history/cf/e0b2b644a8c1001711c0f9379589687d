@@ -73,7 +73,6 @@ public class AllCourses {
 		CourseNum maNum331 = new CourseNum(math, 331);
 		Course math331 = new Course(maNum331, "Ordinary Differential Equations ", null, time10, time11, MW() );
 		allCourses.put(maNum331,  math331);
-		//
 	}
 	
 	public boolean[] MW(){
