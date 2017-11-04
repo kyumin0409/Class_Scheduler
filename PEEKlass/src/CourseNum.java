@@ -11,6 +11,10 @@ public class CourseNum {
 		
 	}
 	
+	public CourseNum(COMPSCI department2, int courseNumber2) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Major getMajor(){
 		
 		return department;

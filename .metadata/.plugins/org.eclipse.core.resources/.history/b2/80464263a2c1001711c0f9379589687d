@@ -1,0 +1,75 @@
+import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
+import java.time.*;
+
+public class AllCourses {
+	
+	HashMap<CourseNum, Course> allCourses = new HashMap<CourseNum, Course>();
+	
+	LocalTime time09 = LocalTime.parse("9:00");
+	LocalTime time10 = LocalTime.parse("10:00");
+	LocalTime time11 = LocalTime.parse("11:00");
+	LocalTime time12 = LocalTime.parse("12:00");
+	LocalTime time13 = LocalTime.parse("13:00");
+	LocalTime time14 = LocalTime.parse("14:00");
+	LocalTime time15 = LocalTime.parse("15:00");
+	LocalTime time16 = LocalTime.parse("16:00");
+	LocalTime time17 = LocalTime.parse("17:00");
+
+	//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH : MM - HH : MM");
+	Major cs = new COMPSCI();
+	
+	public AllCourses(){
+			//CourseNum courseNum, String courseName, CourseNum prereq, DateTimeFormatter time, boolean[] day
+			addCourses();
+	}
+
+	public void addCourses(){
+
+		CourseNum com121 = new CourseNum(cs, 121);
+		Course course121 = new Course(com121, "Intro to CS", null, time11, time12, TTH() );
+		allCourses.put(com121,  course121);
+		
+		CourseNum com187 = new CourseNum(cs, 187);
+		Course course187 = new Course(com187, "Data Structures", null, time14, time15, TTH() );
+		allCourses.put(com187,  course187);
+		
+		CourseNum com311 = new CourseNum(cs, 311);
+		Course course311 = new Course(com311, "Algorithms", null, time16, time17, MW() );
+		allCourses.put(com311,  course311);
+		
+		CourseNum com326 = new CourseNum(cs, 326);
+		Course course326 = new Course(com326, "Web Programming", null, time16, time17, TTH() );
+		allCourses.put(com326,  course326);
+		
+		CourseNum com345 = new CourseNum(cs, 345);
+		Course course345 = new Course(com326, "Data Management", null, time10, time11, MW() );
+		allCourses.put(com345,  course345);
+		
+		CourseNum com377 = new CourseNum(cs, 377);
+		Course course377 = new Course(com326, "Operating Systems", null, time13, time14, TTH() );
+		allCourses.put(com377,  course377);
+		
+		
+	}
+	
+	public boolean[] MW(){
+		boolean[] days = {true, false, true, false, false};
+		return days;
+	}
+	
+	public boolean[] TTH(){		
+		boolean[] days = {false, true, false, true, false};
+		return days;
+	}
+	
+//	public boolean[] monWedFri(){
+//		boolean[] days = {true, false, true, false, true};
+//		return days;
+//	}
+//	
+//	public boolean[] Fri(){
+//		boolean[] days = {false, false, false, false, true};
+//		return days;
+//	}
+}

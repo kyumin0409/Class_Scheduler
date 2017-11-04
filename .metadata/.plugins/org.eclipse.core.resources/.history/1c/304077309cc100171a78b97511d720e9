@@ -1,0 +1,54 @@
+import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
+import java.time.*;
+
+public class AllCourses {
+	
+	HashMap<CourseNum, Course> allCourses = new HashMap<CourseNum, Course>();
+	DateFormat = "%H:%M-%H:%M";
+	
+	public AllCourses(){
+		
+		
+			//CourseNum courseNum, String courseName, CourseNum prereq, DateTimeFormatter time, boolean[] day
+			addCourses();
+		
+	}
+
+	public void addCouses(){
+
+		CourseNum com121 = new CourseNum(new COMPSCI(), 121);
+		Course course121 = new Course(com121, "Intro to CS", null, "11:00-12:15", monWed()  );
+		allCourses.put(com121,  course121);
+		
+	}
+	
+	public boolean[] monWedFri(){
+	
+		//boolean[] days = new boolean[5];
+		
+		boolean[] days = {true, false, true, false, true};
+
+		days[0] = true;
+        days[1] = false;
+        days[2] = true;
+        days[3] = false;
+        days[4] = false;
+		
+		return days;
+	}
+	
+	public boolean[] TueThur(){
+		
+		boolean[] days = new boolean[5];
+		
+		days[0] = false;
+        days[1] = true;
+        days[2] = false;
+        days[3] = true;
+        days[4] = false;
+		
+		return days;
+	}
+	
+}

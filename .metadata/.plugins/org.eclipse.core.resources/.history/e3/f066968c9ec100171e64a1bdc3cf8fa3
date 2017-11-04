@@ -1,0 +1,26 @@
+
+public class MustTake extends ClassList{
+
+	@Override
+	public boolean isOverlap(Course c) {
+		// TODO Auto-generated method stub
+		CourseNum coursenum = c.getCourseNum();
+		if(courselist.containsKey(coursenum)){
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public void add(Course c) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Course c) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

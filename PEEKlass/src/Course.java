@@ -1,4 +1,5 @@
 import java.lang.Object;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class Course {
@@ -19,7 +20,7 @@ public class Course {
 	//M,T,W,Th,F boolean array: true if any of these days are class day
 	private boolean[] day = new boolean[5];
 	
-	public Course(CourseNum courseNum, String courseName, CourseNum prereq, DateTimeFormatter time, boolean[] day){
+	public Course(CourseNum courseNum, String courseName, CourseNum prereq, LocalTime startTime, LocalTime endTime, boolean[] day){
 		
 		this.courseNum = courseNum;
 		this.courseName = courseName;
@@ -30,7 +31,7 @@ public class Course {
 		setIsCore();
 		
 	}
-	
+
 	public void setIsCore(){
 		
 		//this.isCore = courseNum.getMajor().isCore();
