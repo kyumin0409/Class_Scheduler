@@ -1,0 +1,26 @@
+import java.util.HashMap;
+
+public class Person{
+
+	private Major maj;
+	private HashMap<CourseNum,Course> coursesTaken;
+	private HashMap<CourseNum,Course> classesToTake;
+
+	public Person(){
+		maj =  new COMPSCI();
+		coursesTaken = new HashMap<CourseNum,Course>();
+		classesToTake = new HashMap<CourseNum,Course>();
+	}
+
+	public Major getMajor(){
+		return maj;
+	}
+
+	public HashMap<CourseNum,Course> getCoursesTaken(){
+		return coursesTaken;
+	}
+
+	public HashMap<CourseNum,Course> getClassesToTake(){
+		return classesToTake;
+	}
+}
