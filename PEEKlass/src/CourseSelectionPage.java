@@ -156,4 +156,8 @@ public class CourseSelectionPage  extends JPanel{
 		bottomPanel.add(showSelectedPanel());
 		return bottomPanel;
 	}
+	
+	public boolean[] getFilterValues(){
+		return filterValues;
+	}
 }
