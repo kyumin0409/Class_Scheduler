@@ -1,0 +1,24 @@
+
+public class CourseNum {
+	
+	String department;
+	int courseNumber;
+	
+	public CourseNum(String department, int courseNumber){
+		
+		this.department = department;
+		this.courseNumber = courseNumber;
+		
+	}
+	
+	public String getDept(){
+		
+		return department;
+	}
+
+	public int getCourseNum(){
+		
+		return courseNumber;
+	}
+	
+}
