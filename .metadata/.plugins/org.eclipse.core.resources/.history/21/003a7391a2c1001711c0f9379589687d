@@ -35,19 +35,19 @@ public class AllCourses {
 		allCourses.put(com187,  course187);
 		
 		CourseNum com311 = new CourseNum(cs, 311);
-		Course course311 = new Course(com311, "Algorithms", com187, time16, time17, MW() );
+		Course course311 = new Course(com311, "Algorithms", null, time16, time17, MW() );
 		allCourses.put(com311,  course311);
 		
 		CourseNum com326 = new CourseNum(cs, 326);
-		Course course326 = new Course(com326, "Web Programming", com187, time16, time17, TTH() );
+		Course course326 = new Course(com326, "Web Programming", null, time16, time17, TTH() );
 		allCourses.put(com326,  course326);
 		
 		CourseNum com345 = new CourseNum(cs, 345);
-		Course course345 = new Course(com326, "Data Management", com311, time10, time11, MW() );
+		Course course345 = new Course(com326, "Data Management", null, time10, time11, MW() );
 		allCourses.put(com345,  course345);
 		
 		CourseNum com377 = new CourseNum(cs, 377);
-		Course course377 = new Course(com326, "Operating Systems", com326, time13, time14, TTH() );
+		Course course377 = new Course(com326, "Operating Systems", null, time13, time14, TTH() );
 		allCourses.put(com377,  course377);
 		
 		
@@ -63,4 +63,13 @@ public class AllCourses {
 		return days;
 	}
 	
+//	public boolean[] monWedFri(){
+//		boolean[] days = {true, false, true, false, true};
+//		return days;
+//	}
+//	
+//	public boolean[] Fri(){
+//		boolean[] days = {false, false, false, false, true};
+//		return days;
+//	}
 }
