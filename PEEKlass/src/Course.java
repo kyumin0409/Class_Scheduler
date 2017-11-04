@@ -15,7 +15,9 @@ public class Course {
 	private boolean isCore; //check in the Major Class
 	
 	//class time
-	private DateTimeFormatter time;
+	private LocalTime startTime;
+	
+	private LocalTime endTime;
 	
 	//M,T,W,Th,F boolean array: true if any of these days are class day
 	private boolean[] day = new boolean[5];
@@ -25,7 +27,8 @@ public class Course {
 		this.courseNum = courseNum;
 		this.courseName = courseName;
 		this.prereq = prereq;
-		this.time = time;
+		this.startTime = startTime;
+		this.endTime = endTime;
 		this.day = day;
 		
 		setIsCore();
@@ -47,9 +50,13 @@ public class Course {
 		return courseName;
 	}
 	
-	public DateTimeFormatter getTime(){
+	public LocalTime getStartTime(){
 		
-		return time;
+		return startTime;
+	}
+	
+	public LocalTime getEndTime(){
+		return endTime;
 	}
 	
 	public boolean[] getDay(){
