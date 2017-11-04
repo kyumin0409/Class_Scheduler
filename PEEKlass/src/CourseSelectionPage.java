@@ -1,4 +1,5 @@
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.BorderFactory;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
@@ -7,6 +8,8 @@ import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class CourseSelectionPage  extends JPanel{
 	private JPanel showClassesPanel;
@@ -16,6 +19,13 @@ public class CourseSelectionPage  extends JPanel{
 	private JPanel showMustTakePanel;
 	private JPanel showSelectedPanel;
 	private JPanel bottomPanel;
+	public static int numMAJOR = 0;
+	public static int numMWF = 1;
+	public static int numTTH = 2;
+	public static int numNOTTAKEN = 3;
+	public static int numMEETSPREREQ = 4;
+	
+	private boolean[] filterValues = {false, false, false, false, false};
 	
 	
 	public CourseSelectionPage() 
@@ -42,10 +52,55 @@ public class CourseSelectionPage  extends JPanel{
 		filterLabel.setVerticalAlignment(JLabel.CENTER);
 		filterLabel.setFont(new Font("Calibri", Font.BOLD, 20));
 		JCheckBox major = new JCheckBox("Major");
+		major.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	if (major.isSelected())
+            		filterValues[numMAJOR] = true;
+            	else
+            		filterValues[numMAJOR] = false;
+            }
+        });
 		JCheckBox MWF = new JCheckBox("Mon, Wed, Fri");
+		MWF.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	if (major.isSelected())
+            		filterValues[numMWF] = true;
+            	else
+            		filterValues[numMWF] = false;
+            }
+        });
 		JCheckBox TTH = new JCheckBox("Tues, Thurs");
+		TTH.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	if (major.isSelected())
+            		filterValues[numTTH] = true;
+            	else
+            		filterValues[numTTH] = false;
+            }
+        });
 		JCheckBox notTaken = new JCheckBox("Not Taken Before");
+		notTaken.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	if (major.isSelected())
+            		filterValues[numNOTTAKEN] = true;
+            	else
+            		filterValues[numNOTTAKEN] = false;
+            }
+        });
 		JCheckBox meetsPrereq = new JCheckBox("Meets Prerequisites");
+		meetsPrereq.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            		filterValues[numMEETSPREREQ] = !filterValues[numMEETSPREREQ];
+            		System.out.println(filterValues[numMEETSPREREQ]);
+
+            }
+        });
+		
 		JPanel checkBoxesPanel = new JPanel(new FlowLayout());
 		checkBoxesPanel.add(major);
 		checkBoxesPanel.add(MWF);
@@ -66,10 +121,11 @@ public class CourseSelectionPage  extends JPanel{
 	}
 	
 	//center left panel showing class list from filter
-	public JPanel showClassesPanel(){
+	public JScrollPane showClassesPanel(){
 		showClassesPanel = new JPanel();
 		showClassesPanel.setBorder(BorderFactory.createLineBorder(Color.black));
-		return showClassesPanel;
+		JScrollPane pane = new JScrollPane(showClassesPanel);
+		return pane;
 	}
 	
 	//center right panel showing class grid
