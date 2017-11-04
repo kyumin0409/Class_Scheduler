@@ -1,4 +1,4 @@
-public class Selected extends ClassList(){
+public class Selected extends ClassList{
 	
 	public void add(Course c){
 		if (courselist.containsKey(c.getCourseNum())){
