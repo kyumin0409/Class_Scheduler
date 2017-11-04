@@ -67,6 +67,6 @@ public class AllCourses {
 	public boolean[] TTH(){		
 		boolean[] days = {false, true, false, true, false};
 		return days;
-
+s
 	}
 }
