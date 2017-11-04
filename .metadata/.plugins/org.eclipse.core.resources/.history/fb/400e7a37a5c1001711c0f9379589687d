@@ -18,8 +18,7 @@ public class AllCourses {
 	
 	//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH : MM - HH : MM");
 	Major cs = new COMPSCI();
-	
-	Major math = new Math();
+	//Major math = new MATH();
 
 	
 	public AllCourses(){
@@ -49,31 +48,14 @@ public class AllCourses {
 		Course cs345 = new Course(csNum345, "Data Management", csNum311, time10, time11, MW() );
 		allCourses.put(csNum345,  cs345);
 		
-		CourseNum csNum377 = new CourseNum(cs, 377);
-		Course cs377 = new Course(csNum377, "Operating Systems", csNum326, time13, time14, TTH() );
-		allCourses.put(csNum377,  cs377);
+		CourseNum com377 = new CourseNum(cs, 377);
+		Course course377 = new Course(com326, "Operating Systems", com326, time13, time14, TTH() );
+		allCourses.put(com377,  course377);
 		
 		//Math Courses
-		CourseNum maNum131 = new CourseNum(math, 131);
-		Course math131 = new Course(maNum131, "Calc 1", null, time14, time15, TTH() );
-		allCourses.put(maNum131,  math131);
-		
-		CourseNum maNum132 = new CourseNum(math, 132);
-		Course math132 = new Course(maNum132, "Calc 2", maNum131, time10, time11, MW() );
-		allCourses.put(maNum132,  math132);
-		
-		CourseNum maNum233 = new CourseNum(math, 233);
-		Course math233 = new Course(maNum233, "Multivariate Calc", maNum132, time11, time12, TTH() );
-		allCourses.put(maNum233,  math233);
-		
-		CourseNum maNum235 = new CourseNum(math, 235);
-		Course math235 = new Course(maNum235, "Linear Algebra", null, time13, time14, MW() );
-		allCourses.put(maNum235,  math235);
-		
-		CourseNum maNum331 = new CourseNum(math, 331);
-		Course math331 = new Course(maNum331, "Ordinary Differential Equations ", null, time10, time11, MW() );
-		allCourses.put(maNum331,  math331);
-		//
+		CourseNum math131 = new CourseNum(math, 131);
+		Course math131 = new Course(math121, "Calc 1", null, time14, time15, TTH() );
+		allCourses.put(math131,  math);
 	}
 	
 	public boolean[] MW(){
