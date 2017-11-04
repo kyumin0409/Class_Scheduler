@@ -18,17 +18,13 @@ public class AllCourses {
 	
 	//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH : MM - HH : MM");
 	Major cs = new COMPSCI();
+	
 	Major math = new Math();
 
 	
 	public AllCourses(){
 			//CourseNum courseNum, String courseName, CourseNum prereq, DateTimeFormatter time, boolean[] day
 			addCourses();
-	}
-	
-	public HashMap<CourseNum, Course> getAllCourses(){
-		
-		return allCourses;
 	}
 
 	public void addCourses(){

@@ -1,0 +1,15 @@
+import java.util.HashMap;
+
+//filter depending on the boolean values taken from the GUI
+public class FilterCourses {
+	
+	AllCourses allC= new AllCourses();
+	HashMap<CourseNum, Course> coursesMap = new HashMap<CourseNum, Course>();
+
+	public FilterCourses(){
+		
+		coursesMap = allC.getAllCourses();
+	}
+	
+	
+}
