@@ -11,7 +11,7 @@ public abstract class ClassList {
 			courselist = new HashMap<CourseNum,Course>();
 		}
 		
-		public HashMap<CourseNum,Course> getCourseList(){
+		public HashMap<String,Course> getCourseList(){
 			return courselist;
 		}
 		
