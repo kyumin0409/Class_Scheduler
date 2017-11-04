@@ -13,14 +13,7 @@ public class MustTake extends ClassList{
 			Map.Entry pair = (Map.Entry)it.next();
 			LocalTime currStart = ((Course) pair.getValue()).getStartTime();
 			LocalTime currEnd = ((Course) pair.getValue()).getEndTime();
-			if(currStart.compareTo(c.getStartTime())>0 && currStart.compareTo(c.getEndTime())<0){
-				return true;
-			}else if(c.getStartTime().compareTo(currStart)>0 && c.getStartTime().compareTo(currEnd)<0){
-				return true;
-			}
-			else{
-				continue;
-			}
+			
 		}
 		
 		

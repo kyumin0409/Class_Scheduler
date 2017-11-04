@@ -2653,6 +2653,7 @@ Caused by: java.lang.IllegalArgumentException: assertion failed.
 	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
 	at java.lang.Thread.run(Thread.java:745)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.recommenders.coordinates.rcp 4 7 2017-11-04 18:16:39.981
 !MESSAGE Suggesting project coordinate for ‘DependencyInfo{/Users/chaelimseo/Desktop/Fall 2017/HackUMass2017/PEEKlass, PROJECT, {PROJECT_NAME=PEEKlass}}’ failed.
 !STACK 0
@@ -2784,3 +2785,18 @@ Caused by: java.lang.IllegalArgumentException: assertion failed.
 	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
 	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
 	at java.lang.Thread.run(Thread.java:745)
+=======
+!ENTRY org.eclipse.core.jobs 4 2 2017-11-04 18:07:08.782
+!MESSAGE An internal error occurred during: "Periodic workspace save.".
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:542)
+	at java.lang.Integer.<init>(Integer.java:867)
+	at org.eclipse.core.internal.resources.SaveManager.validateMasterTableBeforeSave(SaveManager.java:1595)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1263)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1255)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1232)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1144)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+>>>>>>> origin/master
