@@ -6,15 +6,13 @@ public class FilterCourses {
 	AllCourses allC= new AllCourses();
 	HashMap<CourseNum, Course> coursesMap = new HashMap<CourseNum, Course>();
 	HashMap<CourseNum, Course> newMap = new HashMap<CourseNum, Course>();
-	CourseSelectionPage cp = new CourseSelectionPage();
-	private boolean[] valueGUI;
+	private boolean[] valueGUI = new boolean[5];
 
 	//constructor
 	public FilterCourses(){
 		
 		coursesMap = allC.getAllCourses();
 		//get boolean array size of 5
-		valueGUI = cp.getFilterValues();
 		
 	}
 	
