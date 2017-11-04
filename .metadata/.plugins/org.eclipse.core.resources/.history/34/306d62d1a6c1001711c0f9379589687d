@@ -18,7 +18,7 @@ public class AllCourses {
 	
 	//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH : MM - HH : MM");
 	Major cs = new COMPSCI();
-	Major math = new Math();
+	Math math = new Math();
 
 	
 	public AllCourses(){
