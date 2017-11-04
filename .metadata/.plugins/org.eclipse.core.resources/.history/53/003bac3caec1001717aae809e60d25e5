@@ -30,10 +30,8 @@ public class FilterCourses {
 		        for (CourseNum key : coursesMap.keySet()){
 		            //iterate over key
 		        		//if (key.getMajor() == amy.getMajor){
-		        		//newMap.put(key.getCourseNum(),courseMap.get(key);
+		        			
 		        		//}
-		        	
-		        		
 		           //key: key
 		        	   //value: coursesMap.get(key));
 		        }
