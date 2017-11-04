@@ -25,7 +25,6 @@ public class AllCourses {
 	}
 
 	public void addCourses(){
-		
 		//Computer Science Courses
 		CourseNum com121 = new CourseNum(cs, 121);
 		Course course121 = new Course(com121, "Intro to CS", null, time11, time12, TTH() );
