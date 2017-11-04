@@ -2,16 +2,18 @@ import java.util.HashMap;
 
 public abstract class ClassList {
 		
-		private HashMap<String,Course> list;
+		private HashMap<String,Course> courselist;
 		
 		/**
 		 * constructor
 		 */
 		public ClassList(){
-			list = new HashMap<String,Course>();
+			courselist = new HashMap<String,Course>();
 		}
 		
-		public abstract HashMap<String,Course> courseList();
+		public HashMap<String,Course> getCourseList(){
+			return courselist;
+		}
 		
 		public abstract boolean isOverlap(Course c);
 		
