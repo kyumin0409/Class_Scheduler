@@ -15,9 +15,6 @@ public class AllCourses {
 	LocalTime time15 = LocalTime.parse("15:00");
 	LocalTime time16 = LocalTime.parse("16:00");
 	LocalTime time17 = LocalTime.parse("17:00");
-
-	LocalTime startTime = LocalTime.parse("11:00");
-	LocalTime endTime = LocalTime.parse("12:00");
 	
 	//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH : MM - HH : MM");
 	Major cs = new COMPSCI();
