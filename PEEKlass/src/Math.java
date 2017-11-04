@@ -1,4 +1,4 @@
 
-public class Math {
+public class Math extends Major{
 
 }
