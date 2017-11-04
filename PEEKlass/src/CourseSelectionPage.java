@@ -1,8 +1,11 @@
 import javax.swing.JPanel;
 import javax.swing.BorderFactory;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 
 public class CourseSelectionPage  extends JPanel{
@@ -34,6 +37,22 @@ public class CourseSelectionPage  extends JPanel{
 		filterPanel = new JPanel(new BorderLayout());
 		JLabel filterLabel = new JLabel("Filter");
 		filterPanel.add(filterLabel, BorderLayout.NORTH);
+		filterPanel.setBorder(BorderFactory.createLineBorder(Color.black));
+		filterLabel.setHorizontalAlignment(JLabel.CENTER);
+		filterLabel.setVerticalAlignment(JLabel.CENTER);
+		filterLabel.setFont(new Font("Calibri", Font.BOLD, 20));
+		JCheckBox major = new JCheckBox("Major");
+		JCheckBox MWF = new JCheckBox("Mon, Wed, Fri");
+		JCheckBox TTH = new JCheckBox("Tues, Thurs");
+		JCheckBox notTaken = new JCheckBox("Not Taken Before");
+		JCheckBox meetsPrereq = new JCheckBox("Meets Prerequisites");
+		JPanel checkBoxesPanel = new JPanel(new FlowLayout());
+		checkBoxesPanel.add(major);
+		checkBoxesPanel.add(MWF);
+		checkBoxesPanel.add(TTH);
+		checkBoxesPanel.add(notTaken);
+		checkBoxesPanel.add(meetsPrereq);
+		filterPanel.add(checkBoxesPanel, BorderLayout.CENTER);
 		return filterPanel;
 	}
 	
@@ -42,6 +61,7 @@ public class CourseSelectionPage  extends JPanel{
 		mainPanel = new JPanel(new GridLayout(1,2));
 		mainPanel.add(showClassesPanel());
 		mainPanel.add(showGridPanel());
+		mainPanel.setBorder(BorderFactory.createLineBorder(Color.black));
 		return mainPanel;
 	}
 	

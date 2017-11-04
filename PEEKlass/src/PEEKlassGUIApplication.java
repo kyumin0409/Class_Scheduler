@@ -13,7 +13,7 @@ public class PEEKlassGUIApplication {
 		guiFrame = new JFrame( "PEEKlass");
 
 		// set size
-		guiFrame.setSize( 500, 900 );
+		guiFrame.setSize( 1200, 900 );
 
 		guiFrame.add(new CourseSelectionPage());
 
