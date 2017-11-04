@@ -25,4 +25,10 @@ public class Selected extends ClassList{
 			return ; //else?
 		}
 	}
+
+	@Override
+	public boolean isOverlap(Course c) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
