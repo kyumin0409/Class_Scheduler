@@ -1,50 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-INDEX VERSION 1.127+/Users/yewonhong/Documents/GitHub/HackUMass2017/.metadata/.plugins/org.eclipse.jdt.core
-3334288320.index
-3158197321.index
-3484117950.index
-2132672051.index
-124275899.index
-3720681883.index
-2762063732.index
-2098848092.index
-2084021475.index
-1416793072.index
-3927758025.index
-1271342938.index
-1302770079.index
-1888666045.index
-1499520195.index
-2255771374.index
-1999298954.index
-=======
-INDEX VERSION 1.127+C:\Users\Caroline\Desktop\HackUMass2017\.metadata\.plugins\org.eclipse.jdt.core
-843494433.index
-1525087677.index
-91472061.index
-1841280308.index
-2911469802.index
-2561179376.index
-2221491804.index
-3643810303.index
-1199826107.index
-543038442.index
-1539866187.index
-3314433690.index
-30881555.index
-2997567257.index
-3023511116.index
-194205294.index
-1475717011.index
-449440424.index
->>>>>>> ea0f7d7230f900bf5cffb1c2fb3a76bf5fb3b161
-=======
 INDEX VERSION 1.127+/Users/chaelimseo/Desktop/Fall 2017/HackUMass2017/.metadata/.plugins/org.eclipse.jdt.core
 1807349093.index
 4107190314.index
 1833648217.index
 3302703152.index
+2098848092.index
 2545238116.index
 692505185.index
 3192905117.index
@@ -67,4 +26,3 @@ INDEX VERSION 1.127+/Users/chaelimseo/Desktop/Fall 2017/HackUMass2017/.metadata/
 1633376176.index
 2214973242.index
 3827432217.index
->>>>>>> bf74c2bab8e54e9eb246225bca9f17437208bc9c
