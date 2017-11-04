@@ -2,16 +2,16 @@ import java.util.HashMap;
 
 public abstract class ClassList {
 		
-		protected HashMap<CourseNum,Course> courselist;
+		protected HashMap<String,Course> courselist;
 		
 		/**
 		 * constructor
 		 */
 		public ClassList(){
-			courselist = new HashMap<CourseNum,Course>();
+			courselist = new HashMap<String,Course>();
 		}
 		
-		public HashMap<CourseNum,Course> getCourseList(){
+		public HashMap<String,Course> getCourseList(){
 			return courselist;
 		}
 		

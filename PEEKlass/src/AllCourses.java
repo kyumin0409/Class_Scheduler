@@ -6,6 +6,7 @@ public class AllCourses {
 	
 	HashMap<CourseNum, Course> allCourses = new HashMap<CourseNum, Course>();
 	
+<<<<<<< HEAD
 	LocalTime time09 = LocalTime.parse("9:00");
 	LocalTime time10 = LocalTime.parse("10:00");
 	LocalTime time11 = LocalTime.parse("11:00");
@@ -16,6 +17,10 @@ public class AllCourses {
 	LocalTime time16 = LocalTime.parse("16:00");
 	LocalTime time17 = LocalTime.parse("17:00");
 
+=======
+	LocalTime startTime = LocalTime.parse("11:00");
+	LocalTime endTime = LocalTime.parse("12:00");
+>>>>>>> 653b00e93deee62ff6c51d49412f07dbb362fd37
 	//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH : MM - HH : MM");
 	Major cs = new COMPSCI();
 	
@@ -51,7 +56,11 @@ public class AllCourses {
 		allCourses.put(com377,  course377);
 		
 		
+			//CourseNum courseNum, String courseName, CourseNum prereq, DateTimeFormatter time, boolean[] day
+			addCourses();
+		
 	}
+<<<<<<< HEAD
 	
 	public boolean[] MW(){
 		boolean[] days = {true, false, true, false, false};
@@ -60,6 +69,33 @@ public class AllCourses {
 	
 	public boolean[] TTH(){		
 		boolean[] days = {false, true, false, true, false};
+=======
+
+	public void addCourses(){
+
+		CourseNum com121 = new CourseNum(  cs, 121);
+		Course course121 = new Course(com121, "Intro to CS", null, startTime, endTime, monWedFri()  );
+		allCourses.put(com121,  course121);
+		
+	}
+	
+	public boolean[] monWedFri(){
+	
+		boolean[] days = {true, false, true, false, true};
+		return days;
+	}
+	
+	public boolean[] TueThur(){
+		
+		boolean[] days = new boolean[5];
+		
+		days[0] = false;
+        days[1] = true;
+        days[2] = false;
+        days[3] = true;
+        days[4] = false;
+		
+>>>>>>> 653b00e93deee62ff6c51d49412f07dbb362fd37
 		return days;
 	}
 	
