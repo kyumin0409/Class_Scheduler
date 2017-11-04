@@ -19,7 +19,7 @@ public class AllCourses {
 		
 	}
 
-	public void addCourses(){
+	public void addCouses(){
 
 		CourseNum com121 = new CourseNum(  cs, 121);
 		Course course121 = new Course(com121, "Intro to CS", null, startTime, endTime, monWedFri()  );
