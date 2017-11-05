@@ -130,8 +130,11 @@ public class CourseSelectionPage  extends JPanel{
 	
 	//center right panel showing class grid
 	public JPanel showGridPanel(){
-		showGridPanel = new JPanel();
+		showGridPanel = new JPanel(new BorderLayout());
 		showGridPanel.setBorder(BorderFactory.createLineBorder(Color.black));
+		JPanel scheduleGridPanel = new JPanel();
+	    scheduleGridPanel.setLayout(new GridLayout(10,6,1,1));
+	    showGridPanel.add(scheduleGridPanel, BorderLayout.CENTER);
 		return showGridPanel;
 	}
 	
