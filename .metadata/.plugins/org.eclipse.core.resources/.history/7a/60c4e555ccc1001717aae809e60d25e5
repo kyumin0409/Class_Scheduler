@@ -23,7 +23,7 @@ public class CourseNum {
 	
 	public String deptoString(){
 		
-		return department.getMajorName();
+		return department.getName();
 	}
 	
 	public String courseNumToString(){

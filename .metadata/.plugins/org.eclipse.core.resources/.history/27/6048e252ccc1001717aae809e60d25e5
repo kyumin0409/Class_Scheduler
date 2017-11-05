@@ -18,7 +18,7 @@ public abstract class Major {
 		return false;
 	}
 	
-	protected String getMajorName(){
+	protected String getName(){
 		
 		return majorName;
 	}
