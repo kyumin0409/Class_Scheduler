@@ -135,6 +135,25 @@ public class CourseSelectionPage  extends JPanel{
 		JPanel scheduleGridPanel = new JPanel();
 	    scheduleGridPanel.setLayout(new GridLayout(10,6,1,1));
 	    showGridPanel.add(scheduleGridPanel, BorderLayout.CENTER);
+	    JPanel emptyPanel = new JPanel();
+	    //0,0
+	    scheduleGridPanel.add(emptyPanel);
+	    /**
+	    JLabel monday= new JLabel("Monday");
+	    monday.setBorder(BorderFactory.createLineBorder(Color.black));
+	    JLabel tuesday= new JLabel("Tuesday");
+	    tuesday.setBorder(BorderFactory.createLineBorder(Color.black));
+	    JLabel wednesday= new JLabel("Wednesday");
+	    wednesday.setBorder(BorderFactory.createLineBorder(Color.black));
+	    JLabel thursday= new JLabel("Thursday");
+	    thursday.setBorder(BorderFactory.createLineBorder(Color.black));
+	    JLabel friday= new JLabel("Friday");
+	    friday.setBorder(BorderFactory.createLineBorder(Color.black));
+	    scheduleGridPanel.add(monday);
+	    scheduleGridPanel.add(tuesday);
+	    scheduleGridPanel.add(wednesday);
+	    scheduleGridPanel.add(thursday);
+	    scheduleGridPanel.add(friday);**/
 		return showGridPanel;
 	}
 	
