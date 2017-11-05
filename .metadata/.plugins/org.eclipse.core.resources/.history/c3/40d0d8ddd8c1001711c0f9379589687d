@@ -30,18 +30,6 @@ public class COMPSCI extends Major {
 		CourseNum csNum187 = new CourseNum(this, 187);
 		cs187 = new Course(csNum187 , "Data Structures", csNum121, time14, time15, TTH() );
 		
-		CourseNum csNum311 = new CourseNum(this, 311);
-		cs311 = new Course(csNum311, "Algorithms", csNum311, time16, time17, MW() );
-		
-		CourseNum csNum326 = new CourseNum(this, 326);
-		cs326 = new Course(csNum326, "Web Programming", csNum187, time16, time17, TTH() );
-		
-		CourseNum csNum345 = new CourseNum(this, 345);
-		cs345 = new Course(csNum345, "Data Management", csNum311, time10, time11, MW() );
-		
-		CourseNum csNum377 = new CourseNum(this, 377);
-		cs377 = new Course(csNum377, "Operating Systems", csNum326, time13, time14, TTH() );
-		
 		coreList.add(cs121);
 		coreList.add(cs187);
 		coreList.add(cs311);

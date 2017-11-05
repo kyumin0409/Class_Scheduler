@@ -32,10 +32,20 @@ public class AllCourses {
 
 		allCourses.put(cs.getCS121().getCourseNum(),  cs.getCS121());
 		allCourses.put(cs.getCS187().getCourseNum(),  cs.getCS187());
-		allCourses.put(cs.getCS311().getCourseNum(),  cs.getCS311());
-		allCourses.put(cs.getCS326().getCourseNum(),  cs.getCS326());
-		allCourses.put(cs.getCS345().getCourseNum(),  cs.getCS345());
-		allCourses.put(cs.getCS377().getCourseNum(),  cs.getCS377());
+		allCourses.put(cs.getCS1311().getCourseNum(),  cs.getCS311());
+
+		
+////		CourseNum csNum326 = new CourseNum(cs, 326);
+////		cs326 = new Course(csNum326, "Web Programming", csNum187, time16, time17, TTH() );
+//		allCourses.put(csNum326,  cs326);
+//		
+////		CourseNum csNum345 = new CourseNum(cs, 345);
+////		cs345 = new Course(csNum345, "Data Management", csNum311, time10, time11, MW() );
+//		allCourses.put(csNum345,  cs345);
+//		
+////		CourseNum csNum377 = new CourseNum(cs, 377);
+////		cs377 = new Course(csNum377, "Operating Systems", csNum326, time13, time14, TTH() );
+//		allCourses.put(csNum377,  cs377);
 		
 		//Math Courses
 		CourseNum maNum131 = new CourseNum(math, 131);
