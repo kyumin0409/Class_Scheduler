@@ -6,6 +6,7 @@ public class Person{
 	private HashMap<CourseNum,Course> coursesTaken;
 	private HashMap<CourseNum,Course> classesToTake;
 
+	// coursesTaken && classesToTake change into list
 	public Person(Major major, HashMap<CourseNum,Course> coursesTaken, HashMap<CourseNum,Course> classesToTake){
 		
 		maj = major;

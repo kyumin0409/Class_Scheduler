@@ -1,0 +1,9 @@
+
+public class People {
+
+	Person anthony = new Person(COMPSC(), , );
+	
+	public Person getAnthony(){
+		return anthony;
+	}
+}

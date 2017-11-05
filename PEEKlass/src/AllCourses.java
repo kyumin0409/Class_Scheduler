@@ -1,4 +1,5 @@
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.time.*;
 
@@ -16,6 +17,8 @@ public class AllCourses {
 	LocalTime time16 = LocalTime.parse("16:00");
 	LocalTime time17 = LocalTime.parse("17:00");
 	
+	Course cs121;
+
 	//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH : MM - HH : MM");
 	Major cs = new COMPSCI();
 	Major math = new Math();
@@ -35,7 +38,7 @@ public class AllCourses {
 		
 		//Computer Science Courses
 		CourseNum csNum121 = new CourseNum(cs, 121);
-		Course cs121 = new Course(csNum121, "Intro to CS", null, time11, time12, TTH() );
+		cs121 = new Course(csNum121, "Intro to CS", null, time11, time12, TTH() );
 		allCourses.put(csNum121,  cs121);
 		
 		CourseNum csNum187 = new CourseNum(cs, 187);
@@ -78,7 +81,6 @@ public class AllCourses {
 		CourseNum maNum331 = new CourseNum(math, 331);
 		Course math331 = new Course(maNum331, "Ordinary Differential Equations ", null, time10, time11, MW() );
 		allCourses.put(maNum331,  math331);
-		//
 	}
 	
 	public boolean[] MW(){
@@ -91,4 +93,18 @@ public class AllCourses {
 		return days;
 
 	}
+	
+	public ArrayList<CourseNum> iterateMap(){
+		
+		ArrayList<CourseNum> result = new ArrayList<CourseNum>();
+		
+		for (CourseNum key: allCourses.keySet()){
+			result.add(key);
+		}
+		
+		return result;
+	}
+	
+	
+	
 }
