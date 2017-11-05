@@ -19,25 +19,22 @@ public class FilterCourses {
 		valueGUI = cp.getFilterValues();
 		
 		anthony= people.getAnthony();
-		
 		filterAll(anthony);
 		
 	}
 	
-	public HashMap<CourseNum, Course> filterAll(Person person){
+	public void filterAll(Person person){
 		
 		filterMajor(anthony);
 		filterMW(anthony);
 		filterTTH(anthony);
 		filterNotTaken(anthony);
 		filterMeetsReq(anthony);
-		
-		return newMap;
 	}
 	
 	private void filterMajor(Person person){
 		
-		if (valueGUI[0] == true){
+		if (valueGUI[0] ==true){
 			
 			//iterate coursesMap if any of the majors is equal to amy.getMajor() 
 			
@@ -47,6 +44,9 @@ public class FilterCourses {
 		        		if (key.getMajor() == anthony.getMajor()){
 		        			newMap.put(key,coursesMap.get(key));
 		        		}
+		        		
+		           //key: key
+		        	   //value: coursesMap.get(key));
 		        }
 		}
 	}
