@@ -1,0 +1,24 @@
+import java.util.HashMap;
+
+public abstract class ClassList {
+		
+		protected HashMap<CourseNum,Course> courselist;
+		
+		/**
+		 * constructor
+		 */
+		public ClassList(){
+			courselist = new HashMap<CourseNum,Course>();
+		}
+		
+		public HashMap<CourseNum,Course> getCourseList(){
+			return courselist;
+		}
+		
+		public abstract boolean isOverlap(Course c);
+		
+		public abstract void add(Course c);
+		
+		public abstract void delete(Course c);
+		
+}
