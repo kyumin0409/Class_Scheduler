@@ -33,6 +33,9 @@ public class MustTake extends ClassList{
 		if(courselist.containsKey(c.getCourseNum())){
 			return false;//already contains the course in the list
 		}
+		else if(isOverlap(c)){
+			return false;
+		}
 		else{
 			courselist.put(c.getCourseNum(), c);
 			return true;//successfully added the course to the list

@@ -1,10 +1,17 @@
+
+
 public class MATH extends Major{
 	
 	private AllCourses ac = new AllCourses();
 
-		public MATH(){
+	
+	public MATH(){
+		
+		majorName = "MATH";
+	}
 
-	majorName = "MATH";
+	public MATH(){
+		
 	coreList.add(ac.getMath131());
 	coreList.add(ac.getMath132());
 	coreList.add(ac.getMath233());
