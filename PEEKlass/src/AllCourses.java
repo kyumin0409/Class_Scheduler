@@ -6,12 +6,6 @@ import java.time.*;
 public class AllCourses {
 	
 	HashMap<CourseNum, Course> allCourses = new HashMap<CourseNum, Course>();
-	
-	Course math131;
-	Course math132;
-	Course math233;
-	Course math235;
-	Course math331;
 
 	//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH : MM - HH : MM");
 	COMPSCI cs = new COMPSCI();
@@ -38,11 +32,11 @@ public class AllCourses {
 		allCourses.put(cs.getCS377().getCourseNum(),  cs.getCS377());
 		
 		//Math Courses
-		allCourses.put(maNum131,  math131);
-		allCourses.put(maNum132,  math132);
-		allCourses.put(maNum233,  math233);
-		allCourses.put(maNum235,  math235);
-		allCourses.put(maNum331,  math331);
+		allCourses.put(math.getMath131().getCourseNum(), math.getMath131());
+		allCourses.put(math.getMath132().getCourseNum(), math.getMath132());
+		allCourses.put(math.getMath233().getCourseNum(), math.getMath233());
+		allCourses.put(math.getMath235().getCourseNum(), math.getMath235());
+		allCourses.put(math.getMath331().getCourseNum(), math.getMath331());
 	}
 	
 	
@@ -55,27 +49,6 @@ public class AllCourses {
 		}
 		
 		return result;
-	}
-
-	
-	public Course getMath131(){
-		return math131;
-	}
-	
-	public Course getMath132(){
-		return math132;
-	}
-	
-	public Course getMath233(){
-		return math233;
-	}
-	
-	public Course getMath235(){
-		return math235;
-	}
-	
-	public Course getMath331(){
-		return math331;
 	}
 	
 }
