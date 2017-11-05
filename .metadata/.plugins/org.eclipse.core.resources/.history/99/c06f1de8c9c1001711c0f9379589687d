@@ -24,6 +24,7 @@ public class AllCourses {
 	Course cs345;
 	Course cs377;
 
+
 	//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH : MM - HH : MM");
 	Major cs = new COMPSCI();
 	Major math = new Math();
@@ -110,28 +111,9 @@ public class AllCourses {
 		return result;
 	}
 	
-	public Course getCS121(){
-		return cs121;
+	public CourseNum getCourseNum(){
+		
 	}
 	
-	public Course getCS187(){
-		return cs187;
-	}
-	
-	public Course getCS311(){
-		return cs311;
-	}
-	
-	public Course getCS326(){
-		return cs326;
-	}
-	
-	public Course getCS345(){
-		return cs345;
-	}
-	
-	public Course getCS377(){
-		return cs377;
-	}
 	
 }

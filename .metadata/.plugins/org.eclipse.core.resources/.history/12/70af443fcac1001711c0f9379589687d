@@ -1,5 +1,5 @@
 import java.util.HashMap;
-
+1
 public class People {
 	
 	private AllCourses ac = new AllCourses();

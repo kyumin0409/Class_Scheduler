@@ -25,8 +25,5 @@ public class People {
 	
 	public void addCoursesTaken(){
 		coursesTakenAnthony.put(ac.getCS121().getCourseNum(), ac.getCS121());
-		coursesTakenAnthony.put(ac.getCS187().getCourseNum(), ac.getCS187());
-		coursesTakenAnthony.put(ac.getCS311().getCourseNum(), ac.getCS311());
-
 	}
 }
