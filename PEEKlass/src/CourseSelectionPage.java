@@ -29,9 +29,7 @@ public class CourseSelectionPage  extends JPanel{
 	public static int numMEETSPREREQ = 4;
 	private FilterCourses filterCourses = new FilterCourses(this);
 	private JScrollPane classListPane;
-	
-	
-	private boolean[] filterValues = {false, false, false, false, false};
+	private boolean[] filterValues = new boolean[5];
 	
 	
 	public CourseSelectionPage() 
@@ -43,6 +41,9 @@ public class CourseSelectionPage  extends JPanel{
 	
 	//initializes all panels
 	public void initPanel(){
+		for (int i = 0; i < 5; i++){
+			filterValues[i] = false;
+		}
 		add(filterPanel(), BorderLayout.NORTH);
 		add(mainPanel(), BorderLayout.CENTER);
 		add(bottomPanel(), BorderLayout.SOUTH);
@@ -61,51 +62,45 @@ public class CourseSelectionPage  extends JPanel{
 		major.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
             	if (major.isSelected()){
             		filterValues[numMAJOR] = true;
             		System.out.println("major selected");
             	}
             	else
             		filterValues[numMAJOR] = false;
+=======
+                filterValues[numMAJOR] = !filterValues[numMAJOR];
+
+>>>>>>> origin/master
             }
         });
 		JCheckBox MWF = new JCheckBox("Mon, Wed, Fri");
 		MWF.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	if (major.isSelected())
-            		filterValues[numMWF] = true;
-            	else
-            		filterValues[numMWF] = false;
+            	filterValues[numMWF] = !filterValues[numMWF];
             }
         });
 		JCheckBox TTH = new JCheckBox("Tues, Thurs");
 		TTH.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	if (major.isSelected())
-            		filterValues[numTTH] = true;
-            	else
-            		filterValues[numTTH] = false;
+            	filterValues[numTTH] = !filterValues[numTTH];
             }
         });
 		JCheckBox notTaken = new JCheckBox("Not Taken Before");
 		notTaken.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	if (major.isSelected())
-            		filterValues[numNOTTAKEN] = true;
-            	else
-            		filterValues[numNOTTAKEN] = false;
+        		filterValues[numNOTTAKEN] = !filterValues[numNOTTAKEN];
             }
         });
 		JCheckBox meetsPrereq = new JCheckBox("Meets Prerequisites");
 		meetsPrereq.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            		filterValues[numMEETSPREREQ] = !filterValues[numMEETSPREREQ];
-            		System.out.println(filterValues[numMEETSPREREQ]);
-
+            	filterValues[numMEETSPREREQ] = !filterValues[numMEETSPREREQ];
             }
         });
 		
@@ -122,16 +117,24 @@ public class CourseSelectionPage  extends JPanel{
 		searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+		        showClassesPanel.removeAll();
+		        showClassesPanel.revalidate();
             	HashMap<CourseNum, Course> filteredCourseList = filterCourses.filterAll();
+            	System.out.println(filteredCourseList);
 		        for (CourseNum key : filteredCourseList.keySet()){
 		            	//iterate over key
 		        		CourseNum courseNum = key;
 		        		Course course = filteredCourseList.get(key);
-		        		JPanel eachCourse = new CourseToDisplay(courseNum, course);
-		        		classListPane.add(eachCourse);
+		        		//JPanel eachCourse = new CourseToDisplay(courseNum, course);
+		        		showClassesPanel.add(new CourseToDisplay(courseNum, course));
+		        		
 		        }
+<<<<<<< HEAD
 		        
 		        classListPane.revalidate();
+=======
+		        showClassesPanel.revalidate();
+>>>>>>> origin/master
             }
         });
 		
@@ -150,12 +153,12 @@ public class CourseSelectionPage  extends JPanel{
 	}
 	
 	//center left panel showing class list from filter
-	public JScrollPane showClassesPanel(){
+	public JPanel showClassesPanel(){
 		showClassesPanel = new JPanel();
-		//new BoxLayout(showClassesPanel, BoxLayout.PAGE_AXIS)
+		showClassesPanel.setLayout(new BoxLayout(showClassesPanel, BoxLayout.PAGE_AXIS));
 		showClassesPanel.setBorder(BorderFactory.createLineBorder(Color.black));
-		classListPane = new JScrollPane(showClassesPanel);
-		return classListPane;
+		//classListPane = new JScrollPane(showClassesPanel);
+		return showClassesPanel;
 	}
 	
 	//center right panel showing class grid
@@ -221,11 +224,16 @@ public class CourseSelectionPage  extends JPanel{
 	    //panel.add(component, 0,0 );
 	}**/
 	
+<<<<<<< HEAD
 	public boolean[] getFilterValues(){
 		
 		boolean[] array ={true, true, true, false, false};
 		
 		//return filterValues;
 		return array;
+=======
+	public boolean getFilterValues(int i){
+		return filterValues[i];
+>>>>>>> origin/master
 	}
 }
