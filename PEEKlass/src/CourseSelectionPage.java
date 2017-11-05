@@ -29,8 +29,6 @@ public class CourseSelectionPage  extends JPanel{
 	public static int numMEETSPREREQ = 4;
 	private FilterCourses filterCourses = new FilterCourses(this);
 	private JScrollPane classListPane;
-	
-	
 	private boolean[] filterValues = {false, false, false, false, false};
 	
 	
@@ -120,14 +118,18 @@ public class CourseSelectionPage  extends JPanel{
 		searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+        		System.out.println("search 1");
             	HashMap<CourseNum, Course> filteredCourseList = filterCourses.filterAll();
+            	System.out.println(filteredCourseList);
 		        for (CourseNum key : filteredCourseList.keySet()){
+		        		System.out.println("search");
 		            	//iterate over key
 		        		CourseNum courseNum = key;
 		        		Course course = filteredCourseList.get(key);
-		        		JPanel eachCourse = new CourseToDisplay(courseNum, course);
-		        		classListPane.add(eachCourse);
+		        		//JPanel eachCourse = new CourseToDisplay(courseNum, course);
+		        		showClassesPanel.add(new CourseToDisplay(courseNum, course));
 		        }
+		        showClassesPanel.revalidate();
             }
         });
 		
@@ -146,12 +148,12 @@ public class CourseSelectionPage  extends JPanel{
 	}
 	
 	//center left panel showing class list from filter
-	public JScrollPane showClassesPanel(){
+	public JPanel showClassesPanel(){
 		showClassesPanel = new JPanel();
-		//new BoxLayout(showClassesPanel, BoxLayout.PAGE_AXIS)
+		showClassesPanel.setLayout(new BoxLayout(showClassesPanel, BoxLayout.PAGE_AXIS));
 		showClassesPanel.setBorder(BorderFactory.createLineBorder(Color.black));
-		classListPane = new JScrollPane(showClassesPanel);
-		return classListPane;
+		//classListPane = new JScrollPane(showClassesPanel);
+		return showClassesPanel;
 	}
 	
 	//center right panel showing class grid
@@ -218,6 +220,8 @@ public class CourseSelectionPage  extends JPanel{
 	}**/
 	
 	public boolean[] getFilterValues(){
-		return filterValues;
+		boolean[] array = {true, true, true, false, false};
+		return array;
+		//return filterValues;
 	}
 }

@@ -26,28 +26,31 @@ public class FilterCourses {
 	
 	//add person to parameter to not hard code 
 	public HashMap<CourseNum, Course> filterAll(){
-		
 		filterMajor(anthony);
-		filterDay(anthony);
-		filterNotTaken(anthony);
-		filterMeetsReq(anthony);
+		//filterDay(anthony);
+		//filterNotTaken(anthony);
+		//filterMeetsReq(anthony);
 		
 		return newMap;
 	}
 	
 	private void filterMajor(Person person){
-		
 		if (valueGUI[0] == true){
-			
 			//iterate coursesMap if any of the majors is equal to amy.getMajor() 
 			
 		        //3 differents way to iterate over the map
 		        for (CourseNum key : coursesMap.keySet()){
+		        	System.out.println("anthony "+anthony.getMajor().getMajorName());
+		        	System.out.println("key "+key.getMajor().getMajorName());
+
 		            //iterate over key
-		        		if (key.getMajor() == anthony.getMajor()){
+		        		if (key.getMajor().getMajorName().equals(anthony.getMajor().getMajorName())){
 		        			newMap.put(key,coursesMap.get(key));
+		        			System.out.println("major match");
+		        			
 		        		}
 		        }
+		        System.out.println(newMap);
 		}
 	}
 	
