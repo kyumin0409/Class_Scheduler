@@ -13,6 +13,7 @@ public class COMPSCI extends Major {
 	electiveList.add(ac.getCS345());
 	electiveList.add(ac.getCS377());
 	
+=======
 	//make a 2D array of requirements
 	public COMPSCI(){
 		
