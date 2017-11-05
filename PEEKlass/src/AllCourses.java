@@ -7,22 +7,6 @@ public class AllCourses {
 	
 	HashMap<CourseNum, Course> allCourses = new HashMap<CourseNum, Course>();
 	
-	LocalTime time09 = LocalTime.parse("9:00");
-	LocalTime time10 = LocalTime.parse("10:00");
-	LocalTime time11 = LocalTime.parse("11:00");
-	LocalTime time12 = LocalTime.parse("12:00");
-	LocalTime time13 = LocalTime.parse("13:00");
-	LocalTime time14 = LocalTime.parse("14:00");
-	LocalTime time15 = LocalTime.parse("15:00");
-	LocalTime time16 = LocalTime.parse("16:00");
-	LocalTime time17 = LocalTime.parse("17:00");
-	
-	Course cs121;
-	Course cs187;
-	Course cs311;
-	Course cs326;
-	Course cs345;
-	Course cs377;
 	
 	Course math131;
 	Course math132;
@@ -48,8 +32,8 @@ public class AllCourses {
 	public void addCourses(){
 		
 		//Computer Science Courses
-		CourseNum csNum121 = new CourseNum(cs, 121);
-		cs121 = new Course(csNum121, "Intro to CS", null, time11, time12, TTH() );
+		//CourseNum csNum121 = new CourseNum(cs, 121);
+		//cs121 = new Course(csNum121, "Intro to CS", null, time11, time12, TTH() );
 		allCourses.put(csNum121,  cs121);
 		
 		CourseNum csNum187 = new CourseNum(cs, 187);
@@ -94,16 +78,6 @@ public class AllCourses {
 		allCourses.put(maNum331,  math331);
 	}
 	
-	public boolean[] MW(){
-		boolean[] days = {true, false, true, false, false};
-		return days;
-	}
-	
-	public boolean[] TTH(){		
-		boolean[] days = {false, true, false, true, false};
-		return days;
-
-	}
 	
 	public ArrayList<CourseNum> iterateMap(){
 		
@@ -115,30 +89,7 @@ public class AllCourses {
 		
 		return result;
 	}
-	
-	public Course getCS121(){
-		return cs121;
-	}
-	
-	public Course getCS187(){
-		return cs187;
-	}
-	
-	public Course getCS311(){
-		return cs311;
-	}
-	
-	public Course getCS326(){
-		return cs326;
-	}
-	
-	public Course getCS345(){
-		return cs345;
-	}
-	
-	public Course getCS377(){
-		return cs377;
-	}
+
 	
 	public Course getMath131(){
 		return math131;
