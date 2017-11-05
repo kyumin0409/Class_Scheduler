@@ -18,11 +18,6 @@ public class AllCourses {
 	LocalTime time17 = LocalTime.parse("17:00");
 	
 	Course cs121;
-	Course cs187;
-	Course cs311;
-	Course cs326;
-	Course cs345;
-	Course cs377;
 
 	//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH : MM - HH : MM");
 	Major cs = new COMPSCI();
@@ -47,7 +42,7 @@ public class AllCourses {
 		allCourses.put(csNum121,  cs121);
 		
 		CourseNum csNum187 = new CourseNum(cs, 187);
-		cs187 = new Course(csNum187 , "Data Structures", csNum121, time14, time15, TTH() );
+		Course cs187 = new Course(csNum187 , "Data Structures", csNum121, time14, time15, TTH() );
 		allCourses.put(csNum187,  cs187);
 		
 		CourseNum csNum311 = new CourseNum(cs, 311);
@@ -110,28 +105,6 @@ public class AllCourses {
 		return result;
 	}
 	
-	public Course getCS121(){
-		return cs121;
-	}
 	
-	public Course getCS187(){
-		return cs187;
-	}
-	
-	public Course getCS311(){
-		return cs311;
-	}
-	
-	public Course getCS326(){
-		return cs326;
-	}
-	
-	public Course getCS345(){
-		return cs345;
-	}
-	
-	public Course getCS377(){
-		return cs377;
-	}
 	
 }
