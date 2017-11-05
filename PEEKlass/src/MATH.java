@@ -1,7 +1,4 @@
-<<<<<<< HEAD:PEEKlass/src/Math.java
 
-=======
->>>>>>> origin/master:PEEKlass/src/MATH.java
 public class MATH extends Major{
 	
 	private AllCourses ac = new AllCourses();
