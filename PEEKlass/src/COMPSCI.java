@@ -4,7 +4,7 @@ public class COMPSCI extends Major {
 	private AllCourses ac = new AllCourses();
 
 	public COMPSCI(){
-
+		
 		majorName = "COMPSCI";
 
 		coreList.add(ac.getCS121());
@@ -14,6 +14,6 @@ public class COMPSCI extends Major {
 		electiveList.add(ac.getCS326());
 		electiveList.add(ac.getCS345());
 		electiveList.add(ac.getCS377());
-
 	}
+
 }

@@ -77,15 +77,11 @@ public class FilterCourses {
 	
 	private void filterNotTaken(Person person){
 		
-		if (valueGUI[3]){
-			//go through taken courses
-			for (CourseNum key: person.getCoursesTaken().keySet()){
-				{
-					//if the key is the same
-					if (newMap.containsKey(key)){
-						//delete it
-						newMap.remove(key);
-					}
+		if (!valueGUI[3]){
+			//remove from taken courses
+			for (CourseNum key: coursesMap.keySet()){
+				if (person.getCoursesTaken().get(key)){
+					
 				}
 			}
 		}
@@ -93,9 +89,6 @@ public class FilterCourses {
 	
 	private void filterMeetsReq(Person person){
 		
-		if (!valueGUI[4]){
-			
-		}
 	}
 	
 }

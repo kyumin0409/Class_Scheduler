@@ -77,25 +77,11 @@ public class FilterCourses {
 	
 	private void filterNotTaken(Person person){
 		
-		if (valueGUI[3]){
-			//go through taken courses
-			for (CourseNum key: person.getCoursesTaken().keySet()){
-				{
-					//if the key is the same
-					if (newMap.containsKey(key)){
-						//delete it
-						newMap.remove(key);
-					}
-				}
-			}
-		}
+		
 	}
 	
 	private void filterMeetsReq(Person person){
 		
-		if (!valueGUI[4]){
-			
-		}
 	}
 	
 }
