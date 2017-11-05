@@ -18,11 +18,9 @@ public class FilterCourses {
 		valueGUI = cp.getFilterValues();
 		//Person amy= people.getAmy();
 		
-		//filterMajor(amy);
-		
 	}
 	
-	public void filterMajor(Person person){
+	public void filterMajor(){
 		
 		if (valueGUI[0] ==true){
 			
@@ -41,19 +39,19 @@ public class FilterCourses {
 		}
 	}
 	
-	public void filterMW(Person person){
+	public void filterMW(){
 		
 	}
 	
-	public void filterTTH(Person person){
+	public void filterTTH(){
 		
 	}
 	
-	public void filterNotTaken(Person person){
+	public void filterNotTaken(){
 		
 	}
 	
-	public void filterMeetsReq(Person person){
+	public void filterMeetsReq(){
 		
 	}
 	

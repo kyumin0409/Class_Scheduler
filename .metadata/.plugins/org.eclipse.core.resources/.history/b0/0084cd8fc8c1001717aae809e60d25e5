@@ -18,7 +18,7 @@ public class FilterCourses {
 		valueGUI = cp.getFilterValues();
 		//Person amy= people.getAmy();
 		
-		//filterMajor(amy);
+		filterMajor(amy);
 		
 	}
 	
