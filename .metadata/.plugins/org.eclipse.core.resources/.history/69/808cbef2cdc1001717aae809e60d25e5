@@ -28,9 +28,8 @@ public class People {
 		coursesTakenAnthony.put(ac.getCS187().getCourseNum(), ac.getCS187());
 		coursesTakenAnthony.put(ac.getCS311().getCourseNum(), ac.getCS311());
 <<<<<<< HEAD
-		
 =======
-
->>>>>>> origin/master
+		
+>>>>>>> 2b295305cbb76ad8d51819716b314b4e6df2b362
 	}
 }

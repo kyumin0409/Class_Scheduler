@@ -80,8 +80,7 @@ public class FilterCourses {
 		if (!valueGUI[3]){
 			//remove from taken courses
 			for (CourseNum key: coursesMap.keySet()){
-				//if (person.getCoursesTaken().get(key))
-				{
+				if (person.getCoursesTaken().get(key)){
 					
 				}
 			}
