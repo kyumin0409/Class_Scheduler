@@ -11,6 +11,7 @@ public abstract class Major {
 	protected ArrayList<Course> electiveList = new ArrayList<Course>();
 	
 	protected boolean isCore(){
+		
 		//iterate through the core list and if there's one, return true
 		//otherwise, return false;
 		

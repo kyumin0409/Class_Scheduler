@@ -1,6 +1,7 @@
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
@@ -11,6 +12,7 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
 
 public class CourseSelectionPage  extends JPanel{
 	private JPanel showClassesPanel;
@@ -25,6 +27,9 @@ public class CourseSelectionPage  extends JPanel{
 	public static int numTTH = 2;
 	public static int numNOTTAKEN = 3;
 	public static int numMEETSPREREQ = 4;
+	private FilterCourses filterCourses = new FilterCourses(this);
+	private JScrollPane classListPane;
+	
 	
 	private boolean[] filterValues = {false, false, false, false, false};
 	
@@ -115,7 +120,14 @@ public class CourseSelectionPage  extends JPanel{
 		searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            		
+            	HashMap<CourseNum, Course> filteredCourseList = filterCourses.filterAll();
+		        for (CourseNum key : filteredCourseList.keySet()){
+		            	//iterate over key
+		        		CourseNum courseNum = key;
+		        		Course course = filteredCourseList.get(key);
+		        		JPanel eachCourse = new CourseToDisplay(courseNum, course);
+		        		classListPane.add(eachCourse);
+		        }
             }
         });
 		
@@ -136,9 +148,10 @@ public class CourseSelectionPage  extends JPanel{
 	//center left panel showing class list from filter
 	public JScrollPane showClassesPanel(){
 		showClassesPanel = new JPanel();
+		//new BoxLayout(showClassesPanel, BoxLayout.PAGE_AXIS)
 		showClassesPanel.setBorder(BorderFactory.createLineBorder(Color.black));
-		JScrollPane pane = new JScrollPane(showClassesPanel);
-		return pane;
+		classListPane = new JScrollPane(showClassesPanel);
+		return classListPane;
 	}
 	
 	//center right panel showing class grid

@@ -3,11 +3,9 @@ public class CourseDriver {
 	private FilterCourses courses;
 	private MustTake must;
 	private Selected selected;
-	private CourseSelectionPage cp;
 	
 	public CourseDriver (){
-		cp = new CourseSelectionPage();
-		courses = new FilterCourses(cp);
+		courses = new FilterCourses();
 		must = new MustTake();
 		selected = new Selected();
 	}
@@ -54,7 +52,7 @@ public class CourseDriver {
 		if(selected.delete(c) == true){
 			
 			//return true if there is no overlap and false if there is an overlap
-			if(must.isOverlap(c)){
+			if(must.isOverlap(c){
 				return false;
 			} else {
 				must.add(c);
