@@ -35,7 +35,7 @@ public class CourseDriver {
 		if(must.delete(c) == true){
 			
 			//return true if there is no overlap and false if there is an overlap
-			if(selected.isOverlap(c){
+			if(selected.isOverlap(c)){
 				return false;
 			} else {
 				selected.add(c);
@@ -47,12 +47,12 @@ public class CourseDriver {
 		//add to selected
 	}
 	
-	public void selectedToMust(Course c){
+	public boolean selectedToMust(Course c){
 		//check that c exists in selected
 		if(selected.delete(c) == true){
 			
 			//return true if there is no overlap and false if there is an overlap
-			if(must.isOverlap(c){
+			if(must.isOverlap(c)){
 				return false;
 			} else {
 				must.add(c);
