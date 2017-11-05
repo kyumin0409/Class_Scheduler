@@ -21,12 +21,11 @@ public class FilterCourses {
 		valueGUI = cp.getFilterValues();
 		
 		anthony= people.getAnthony();
-		
-		filterAll(anthony);
-		
+				
 	}
 	
-	public HashMap<CourseNum, Course> filterAll(Person person){
+	//add person to parameter to not hard code 
+	public HashMap<CourseNum, Course> filterAll(){
 		
 		filterMajor(anthony);
 		filterDay(anthony);
