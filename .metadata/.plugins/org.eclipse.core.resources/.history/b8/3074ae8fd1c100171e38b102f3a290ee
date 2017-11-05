@@ -52,7 +52,7 @@ public class CourseDriver {
 		if(selected.delete(c) == true){
 			
 			//return true if there is no overlap and false if there is an overlap
-			if(must.isOverlap(c)){
+			if(must.isOverlap(c){
 				return false;
 			} else {
 				must.add(c);
