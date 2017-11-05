@@ -21,11 +21,12 @@ public class FilterCourses {
 		valueGUI = cp.getFilterValues();
 		
 		anthony= people.getAnthony();
-				
+		
+		filterAll(anthony);
+		
 	}
 	
-	//add person to parameter to not hard code 
-	public HashMap<CourseNum, Course> filterAll(){
+	public HashMap<CourseNum, Course> filterAll(Person person){
 		
 		filterMajor(anthony);
 		filterDay(anthony);
@@ -92,13 +93,8 @@ public class FilterCourses {
 	
 	private void filterMeetsReq(Person person){
 		
-		if (valueGUI[4]){
-			for (CourseNum key: newMap.keySet()){
-				CourseNum prereq = newMap.get(key).getPreReq();
-				if(!(person.getCoursesTaken().containsKey(prereq))){
-					newMap.remove(key);
-				}
-			}
+		if (!valueGUI[4]){
+			
 		}
 	}
 	
