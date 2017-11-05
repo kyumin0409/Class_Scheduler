@@ -3,9 +3,11 @@ public class CourseDriver {
 	private FilterCourses courses;
 	private MustTake must;
 	private Selected selected;
+	private CourseSelectionPage cp;
 	
 	public CourseDriver (){
-		courses = new FilterCourses();
+		cp = new CourseSelectionPage();
+		courses = new FilterCourses(cp);
 		must = new MustTake();
 		selected = new Selected();
 	}

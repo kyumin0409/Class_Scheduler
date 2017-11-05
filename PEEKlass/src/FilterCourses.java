@@ -6,7 +6,7 @@ public class FilterCourses {
 	AllCourses allC= new AllCourses();
 	HashMap<CourseNum, Course> coursesMap = new HashMap<CourseNum, Course>();
 	HashMap<CourseNum, Course> newMap = new HashMap<CourseNum, Course>();
-	CourseSelectionPage cp = new CourseSelectionPage();
+	CourseSelectionPage cp;
 	private boolean[] valueGUI;
 	People people = new People();
 	Person anthony;
@@ -14,8 +14,8 @@ public class FilterCourses {
 	private boolean[] TTHU = {false, true, false, true, false};
 
 	//constructor
-	public FilterCourses(){
-		
+	public FilterCourses(CourseSelectionPage cp){
+		this.cp = cp;
 		coursesMap = allC.getAllCourses();
 		//get boolean array size of 5
 		valueGUI = cp.getFilterValues();
