@@ -68,9 +68,4 @@ public class Course {
 		
 		return isCore;
 	}
-	
-	public CourseNum getPreReq(){
-		
-		return prereq;
-	}
 }

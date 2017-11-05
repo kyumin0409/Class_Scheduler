@@ -93,13 +93,8 @@ public class FilterCourses {
 	
 	private void filterMeetsReq(Person person){
 		
-		if (valueGUI[4]){
-			for (CourseNum key: newMap.keySet()){
-				CourseNum prereq = newMap.get(key).getPreReq();
-				if(!(person.getCoursesTaken().containsKey(prereq))){
-					newMap.remove(key);
-				}
-			}
+		if (!valueGUI[4]){
+			
 		}
 	}
 	
