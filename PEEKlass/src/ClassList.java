@@ -19,6 +19,5 @@ public abstract class ClassList {
 		
 		public abstract boolean add(Course c);
 		
-		public abstract boolean delete(Course c);
-		
+		public abstract boolean delete(Course c);	
 }

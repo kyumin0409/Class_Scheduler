@@ -1,0 +1,40 @@
+
+<<<<<<< HEAD
+public class MATH extends Major{
+	
+	private AllCourses ac = new AllCourses();
+	
+	public class Math extends Major{
+	
+		public Math(){
+			majorName = "Math";
+		}
+=======
+
+public class MATH extends Major{
+	
+	private AllCourses ac = new AllCourses();
+
+>>>>>>> 3f2ca0d5393d7cdea1d6624e97b6cdbc03dc1bf3
+
+		public MATH(){
+		
+<<<<<<< HEAD
+			coreList.add(ac.getMath131());
+			coreList.add(ac.getMath132());
+			coreList.add(ac.getMath233());
+			
+			electiveList.add(ac.getMath235());
+			electiveList.add(ac.getMath331());
+=======
+	majorName = "MATH";
+	coreList.add(ac.getMath131());
+	coreList.add(ac.getMath132());
+	coreList.add(ac.getMath233());
+
+	electiveList.add(ac.getMath235());
+	electiveList.add(ac.getMath331());
+>>>>>>> 3f2ca0d5393d7cdea1d6624e97b6cdbc03dc1bf3
+	
+	}
+}

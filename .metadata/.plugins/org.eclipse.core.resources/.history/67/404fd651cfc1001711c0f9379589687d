@@ -5,14 +5,11 @@ public class COMPSCI extends Major {
 
 	public COMPSCI(){
 <<<<<<< HEAD
-		
-		majorName = "COMPSCI";
-		
+
 =======
-
+>>>>>>> fde3f6fdabf794af87ca36b4d49595bc7ef21456
 		majorName = "COMPSCI";
 
->>>>>>> origin/master
 		coreList.add(ac.getCS121());
 		coreList.add(ac.getCS187());
 		coreList.add(ac.getCS311());
@@ -21,9 +18,8 @@ public class COMPSCI extends Major {
 		electiveList.add(ac.getCS345());
 		electiveList.add(ac.getCS377());
 <<<<<<< HEAD
+
 =======
-
->>>>>>> origin/master
+>>>>>>> fde3f6fdabf794af87ca36b4d49595bc7ef21456
 	}
-
 }
