@@ -32,7 +32,8 @@ public class MustTake extends ClassList{
 		// TODO Auto-generated method stub
 		if(courselist.containsKey(c.getCourseNum())){
 			return false;//already contains the course in the list
-		}else{
+		}
+		else{
 			courselist.put(c.getCourseNum(), c);
 			return true;//successfully added the course to the list
 		}
