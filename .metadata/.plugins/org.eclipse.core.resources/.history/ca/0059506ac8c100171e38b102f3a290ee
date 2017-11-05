@@ -43,7 +43,7 @@ public class MustTake extends ClassList{
 		// TODO Auto-generated method stub
 		if(courselist.containsKey(c.getCourseNum())){
 			courselist.remove(c.getCourseNum(), c);
-			return true;//successfully deleted the course from the list
+			return true;//succesfully deleted the course from the list
 		}else{
 			return false;//the class doesn't exist in the list
 		}
