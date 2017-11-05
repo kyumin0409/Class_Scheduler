@@ -8,8 +8,7 @@ public class FilterCourses {
 	HashMap<CourseNum, Course> newMap = new HashMap<CourseNum, Course>();
 	CourseSelectionPage cp = new CourseSelectionPage();
 	private boolean[] valueGUI;
-	People people = new People();
-	Person anthony;
+	//People people;
 
 	//constructor
 	public FilterCourses(){
@@ -17,22 +16,11 @@ public class FilterCourses {
 		coursesMap = allC.getAllCourses();
 		//get boolean array size of 5
 		valueGUI = cp.getFilterValues();
-		
-		anthony= people.getAnthony();
-		filterAll(anthony);
+		//Person amy= people.getAmy();
 		
 	}
 	
-	public void filterAll(Person person){
-		
-		filterMajor(anthony);
-		filterMW(anthony);
-		filterTTH(anthony);
-		filterNotTaken(anthony);
-		filterMeetsReq(anthony);
-	}
-	
-	private void filterMajor(Person person){
+	public void filterMajor(){
 		
 		if (valueGUI[0] ==true){
 			
@@ -41,29 +29,28 @@ public class FilterCourses {
 		        //3 differents way to iterate over the map
 		        for (CourseNum key : coursesMap.keySet()){
 		            //iterate over key
-		        		if (key.getMajor() == anthony.getMajor()){
-		        			newMap.put(key,coursesMap.get(key));
-		        		}
-		        		
+		        		//if (key.getMajor() == amy.getMajor){
+		        			
+		        		//}
 		           //key: key
 		        	   //value: coursesMap.get(key));
 		        }
 		}
 	}
 	
-	private void filterMW(Person person){
+	public void filterMW(){
 		
 	}
 	
-	private void filterTTH(Person person){
+	public void filterTTH(){
 		
 	}
 	
-	private void filterNotTaken(Person person){
+	public void filterNotTaken(){
 		
 	}
 	
-	private void filterMeetsReq(Person person){
+	public void filterMeetsReq(){
 		
 	}
 	

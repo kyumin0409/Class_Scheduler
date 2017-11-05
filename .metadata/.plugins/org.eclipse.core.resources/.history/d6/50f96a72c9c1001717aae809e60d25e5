@@ -41,8 +41,8 @@ public class FilterCourses {
 		        //3 differents way to iterate over the map
 		        for (CourseNum key : coursesMap.keySet()){
 		            //iterate over key
-		        		if (key.getMajor() == anthony.getMajor()){
-		        			newMap.put(key,coursesMap.get(key));
+		        		if (key.getMajor() == anthony.getMajor){
+		        		newMap.put(key.getCourseNum(),courseMap.get(key);
 		        		}
 		        		
 		           //key: key

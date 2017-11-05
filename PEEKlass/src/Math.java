@@ -1,7 +1,16 @@
 
+<<<<<<< HEAD
 public class MATH extends Major{
 	
 	private AllCourses ac = new AllCourses();
+=======
+public class Math extends Major{
+	
+	public Math(){
+		
+		majorName = "Math";
+	}
+>>>>>>> 2b295305cbb76ad8d51819716b314b4e6df2b362
 
 	public MATH(){
 		
