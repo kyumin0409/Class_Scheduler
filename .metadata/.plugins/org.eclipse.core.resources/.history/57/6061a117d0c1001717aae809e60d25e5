@@ -10,8 +10,6 @@ public class FilterCourses {
 	private boolean[] valueGUI;
 	People people = new People();
 	Person anthony;
-	private boolean[] MW = {true, false, true, false, false};
-	private boolean[] TTHU = {false, true, false, true, false};
 
 	//constructor
 	public FilterCourses(){
@@ -29,7 +27,8 @@ public class FilterCourses {
 	public HashMap<CourseNum, Course> filterAll(Person person){
 		
 		filterMajor(anthony);
-		filterDay(anthony);
+		filterMW(anthony);
+		filterTTH(anthony);
 		filterNotTaken(anthony);
 		filterMeetsReq(anthony);
 		
@@ -52,31 +51,15 @@ public class FilterCourses {
 		}
 	}
 	
-	private void filterDay(Person person){
+	private void filterMW(Person person){
 		
-		if ( !valueGUI[1]){
-			//if it's not MW class, delete MW classes
-			for (CourseNum key: coursesMap.keySet()){
-				
-				if (coursesMap.get(key).getDay() == MW){
-					newMap.remove(key);
-				}
-			}
-		}
+	}
+	
+	private void filterTTH(Person person){
 		
-		if (!valueGUI[2]){	
-			//if it's not TTHU class, delete TTHU classes
-			for (CourseNum key: coursesMap.keySet()){
-				
-				if (coursesMap.get(key).getDay() == TTHU){
-					newMap.remove(key);
-				}
-			}
-		} 
 	}
 	
 	private void filterNotTaken(Person person){
-		
 		
 	}
 	
