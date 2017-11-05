@@ -140,24 +140,4 @@ public class AllCourses {
 		return cs377;
 	}
 	
-	public Course getMath131(){
-		return math131;
-	}
-	
-	public Course getMath132(){
-		return math132;
-	}
-	
-	public Course getMath233(){
-		return math233;
-	}
-	
-	public Course getMath235(){
-		return math235;
-	}
-	
-	public Course getMath331(){
-		return math331;
-	}
-	
 }
