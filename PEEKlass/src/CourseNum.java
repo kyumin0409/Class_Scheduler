@@ -10,10 +10,6 @@ public class CourseNum {
 		this.courseNumber = courseNumber;
 		
 	}
-	
-	public CourseNum(COMPSCI department2, int courseNumber2) {
-		// TODO Auto-generated constructor stub
-	}
 
 	public Major getMajor(){
 		
@@ -25,4 +21,13 @@ public class CourseNum {
 		return courseNumber;
 	}
 	
+	public String deptoString(){
+		
+		return department.getMajorName();
+	}
+	
+	public String courseNumToString(){
+		
+		return Integer.toString(courseNumber);
+	}
 }
