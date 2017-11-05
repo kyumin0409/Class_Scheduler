@@ -1,6 +1,7 @@
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.BorderFactory;
+import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import java.awt.BorderLayout;
@@ -107,6 +108,18 @@ public class CourseSelectionPage  extends JPanel{
 		checkBoxesPanel.add(TTH);
 		checkBoxesPanel.add(notTaken);
 		checkBoxesPanel.add(meetsPrereq);
+		
+		//TODO
+		//should display info sent from filterCourses class
+		JButton searchButton = new JButton("Seach");
+		searchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            		
+            }
+        });
+		
+		checkBoxesPanel.add(searchButton);
 		filterPanel.add(checkBoxesPanel, BorderLayout.CENTER);
 		return filterPanel;
 	}
@@ -157,10 +170,13 @@ public class CourseSelectionPage  extends JPanel{
 		return showGridPanel;
 	}
 	
+	
+	
 	//bottom left panel showing classes that must be taken (check mark)
 	public JPanel showMustTakePanel(){
 		showMustTakePanel = new JPanel();
 		showMustTakePanel.setBorder(BorderFactory.createLineBorder(Color.black));
+		showMustTakePanel.setBackground(Color.red);
 		return showMustTakePanel;
 	}
 	
@@ -168,6 +184,7 @@ public class CourseSelectionPage  extends JPanel{
 	public JPanel showSelectedPanel(){
 		showSelectedPanel = new JPanel();
 		showSelectedPanel.setBorder(BorderFactory.createLineBorder(Color.black));
+		showSelectedPanel.setBackground(Color.yellow);
 		return showSelectedPanel;
 	}
 	
@@ -178,6 +195,14 @@ public class CourseSelectionPage  extends JPanel{
 		bottomPanel.add(showSelectedPanel());
 		return bottomPanel;
 	}
+	/**
+	
+	public JPanel scheduleGridPanel(){
+	    JPanel scheduleGridPanel = new JPanel();
+	    scheduleGridPanel.setLayout(new GridLayout(2,2,1,1));
+	    //JButton component= new JButton("Component");
+	    //panel.add(component, 0,0 );
+	}**/
 	
 	public boolean[] getFilterValues(){
 		return filterValues;
