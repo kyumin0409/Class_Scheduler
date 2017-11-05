@@ -1,9 +1,9 @@
 
-public class COMPSCI extends Major {
-
+public class MATH extends Major{
+	
 	private AllCourses ac = new AllCourses();
 
-	public COMPSCI(){
+	public MATH(){
 		
 	coreList.add(ac.getCS121());
 	coreList.add(ac.getCS187());

@@ -8,7 +8,7 @@ public class People {
 	private HashMap<CourseNum,Course> coursesToTakeAnthony = new HashMap<CourseNum,Course>();
 	
 	Major cs = new COMPSCI();
-	Major math = new MATH();
+	Major math = new MATH());
 
 	Person anthony;
 	
