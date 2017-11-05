@@ -2666,6 +2666,7 @@ java.lang.NumberFormatException: null
 	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1144)
 	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+<<<<<<< HEAD
 
 !ENTRY org.eclipse.jdt.core 4 4 2017-11-04 18:11:01.774
 !MESSAGE Background Indexer Crash Recovery
@@ -3020,3 +3021,31 @@ java.lang.NumberFormatException: null
 	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1144)
 	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+=======
+!SESSION 2017-11-04 21:05:54.377 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-11-04 21:06:01.333
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.launching 1 0 2017-11-04 21:06:03.834
+!MESSAGE Installed JRE 'Java SE 8 [1.8.0_111]' removed due to missing VM type extension.
+
+!ENTRY org.eclipse.jdt.launching 1 0 2017-11-04 21:06:03.843
+!MESSAGE Installed JRE 'Java SE 8 [1.8.0_65]' removed due to missing VM type extension.
+
+!ENTRY org.eclipse.jdt.launching 1 0 2017-11-04 21:06:03.857
+!MESSAGE Installed JRE 'Java SE 6 [1.6.0_65-b14-468]' removed due to missing VM type extension.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-04 21:06:26.477
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Caroline'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+>>>>>>> 709c95119a0499e261d2f864714e328cb9c68002

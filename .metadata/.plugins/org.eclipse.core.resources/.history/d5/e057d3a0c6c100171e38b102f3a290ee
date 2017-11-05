@@ -28,26 +28,29 @@ public class MustTake extends ClassList{
 	}
 
 	@Override
-	public boolean add(Course c) {
+	public void add(Course c) {
 		// TODO Auto-generated method stub
 		if(courselist.containsKey(c.getCourseNum())){
-			return false;//already contains the course in the list
+			return;
 		}else{
 			courselist.put(c.getCourseNum(), c);
-			return true;//successfully added the course to the list
 		}
 	}
 
 	@Override
-	public boolean delete(Course c) {
+	public void delete(Course c) {
 		// TODO Auto-generated method stub
 		if(courselist.containsKey(c.getCourseNum())){
 			courselist.remove(c.getCourseNum(), c);
-			return true;//successfully deleted the course from the list
 		}else{
-			return false;//the class doesn't exist in the list
+			return;
 		}
 		
+	}
+	
+	public void moveToSelected(Course c){
+		this.delete(c);
+		Selected.add(c);
 	}
 	
 }

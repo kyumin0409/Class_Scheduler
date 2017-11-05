@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public abstract class ClassList {
 		
-		protected static HashMap<CourseNum,Course> courselist;
+		protected HashMap<CourseNum,Course> courselist;
 		
 		/**
 		 * constructor
@@ -17,8 +17,8 @@ public abstract class ClassList {
 		
 		public abstract boolean isOverlap(Course c);
 		
-		public abstract boolean add(Course c);
+		public abstract void add(Course c);
 		
-		public abstract boolean delete(Course c);
+		public abstract void delete(Course c);
 		
 }
