@@ -130,8 +130,6 @@ public class CourseSelectionPage  extends JPanel{
 		        		JPanel eachCourse = new CourseToDisplay(courseNum, course);
 		        		classListPane.add(eachCourse);
 		        }
-		        
-		        classListPane.revalidate();
             }
         });
 		

@@ -41,10 +41,10 @@ public class FilterCourses {
 			
 			//iterate coursesMap if any of the majors is equal to amy.getMajor() 
 			
-		        //3 different ways to iterate over the map
+		        //3 differents way to iterate over the map
 		        for (CourseNum key : coursesMap.keySet()){
 		            //iterate over key
-		        		if (key.getMajor().getMajorName().equals(anthony.getMajor().getMajorName())){
+		        		if (key.getMajor() == anthony.getMajor()){
 		        			newMap.put(key,coursesMap.get(key));
 		        		}
 		        }

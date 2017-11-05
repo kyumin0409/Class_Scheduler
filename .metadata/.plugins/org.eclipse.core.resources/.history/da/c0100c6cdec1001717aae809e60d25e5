@@ -31,7 +31,7 @@ public class CourseSelectionPage  extends JPanel{
 	private JScrollPane classListPane;
 	
 	
-	private boolean[] filterValues = {false, false, false, false, false};
+	private boolean[] filterValues;
 	
 	
 	public CourseSelectionPage() 
@@ -39,6 +39,7 @@ public class CourseSelectionPage  extends JPanel{
 		super(new BorderLayout());
 		setFocusable(true);
 		initPanel();
+		filterValues = {false, false, false, false, false};
 	}
 	
 	//initializes all panels
@@ -61,10 +62,8 @@ public class CourseSelectionPage  extends JPanel{
 		major.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	if (major.isSelected()){
+            	if (major.isSelected())
             		filterValues[numMAJOR] = true;
-            		System.out.println("major selected");
-            	}
             	else
             		filterValues[numMAJOR] = false;
             }
@@ -130,8 +129,6 @@ public class CourseSelectionPage  extends JPanel{
 		        		JPanel eachCourse = new CourseToDisplay(courseNum, course);
 		        		classListPane.add(eachCourse);
 		        }
-		        
-		        classListPane.revalidate();
             }
         });
 		
@@ -222,10 +219,6 @@ public class CourseSelectionPage  extends JPanel{
 	}**/
 	
 	public boolean[] getFilterValues(){
-		
-		boolean[] array ={true, true, true, false, false};
-		
-		//return filterValues;
-		return array;
+		return filterValues;
 	}
 }

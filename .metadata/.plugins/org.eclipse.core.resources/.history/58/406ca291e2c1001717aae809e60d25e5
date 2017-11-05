@@ -223,9 +223,9 @@ public class CourseSelectionPage  extends JPanel{
 	
 	public boolean[] getFilterValues(){
 		
-		boolean[] array ={true, true, true, false, false};
+		//boolean[] array ={true, true, true, false, false};
 		
-		//return filterValues;
-		return array;
+		return filterValues;
+		//return array;
 	}
 }

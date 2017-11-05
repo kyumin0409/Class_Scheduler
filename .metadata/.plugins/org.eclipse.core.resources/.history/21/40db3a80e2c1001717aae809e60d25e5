@@ -130,8 +130,6 @@ public class CourseSelectionPage  extends JPanel{
 		        		JPanel eachCourse = new CourseToDisplay(courseNum, course);
 		        		classListPane.add(eachCourse);
 		        }
-		        
-		        classListPane.revalidate();
             }
         });
 		
@@ -223,9 +221,9 @@ public class CourseSelectionPage  extends JPanel{
 	
 	public boolean[] getFilterValues(){
 		
-		boolean[] array ={true, true, true, false, false};
+		//boolean[] array ={true, true, true, false, false};
 		
-		//return filterValues;
-		return array;
+		return filterValues;
+		//return array;
 	}
 }
