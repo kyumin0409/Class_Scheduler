@@ -30,14 +30,36 @@ public class CourseDriver {
 		selected.delete(c);
 	}
 	
-	public void mustToSelected(Course c){
+	public boolean mustToSelected(Course c){
 		//check that c exists in must
+		if(must.delete(c) == true){
+			
+			//return true if there is no overlap and false if there is an overlap
+			if(selected.isOverlap(c){
+				return false;
+			} else {
+				selected.add(c);
+				return true;
+			}
+		}
+		return false;
 		//delete from must
 		//add to selected
 	}
 	
 	public void selectedToMust(Course c){
 		//check that c exists in selected
+		if(selected.delete(c) == true){
+			
+			//return true if there is no overlap and false if there is an overlap
+			if(must.isOverlap(c){
+				return false;
+			} else {
+				must.add(c);
+				return true;
+			}
+		}
+		return false;
 		//delete from selected
 		//add to must
 	}

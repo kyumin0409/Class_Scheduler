@@ -7,7 +7,7 @@ public class Selected extends ClassList{
 	public boolean add(Course c){
 		if (courselist.containsKey(c.getCourseNum())){
 			return false;
-		} else{
+		} else {
 			courselist.put(c.getCourseNum(), c);
 			return true;
 		}
