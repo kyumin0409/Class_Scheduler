@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 INDEX VERSION 1.127+C:\Users\Caroline\Desktop\HackUMass2017\.metadata\.plugins\org.eclipse.jdt.core
 1525087677.index
 449440424.index
@@ -19,25 +18,3 @@ INDEX VERSION 1.127+C:\Users\Caroline\Desktop\HackUMass2017\.metadata\.plugins\o
 1199826107.index
 2221491804.index
 1841280308.index
-=======
-INDEX VERSION 1.127+/Users/yewonhong/Documents/GitHub/HackUMass2017/.metadata/.plugins/org.eclipse.jdt.core
-1999298954.index
-124275899.index
-2255771374.index
-3158197321.index
-2132672051.index
-3663672319.index
-3334288320.index
-1499520195.index
-680827947.index
-1271342938.index
-1888666045.index
-3484117950.index
-1416793072.index
-1302770079.index
-3927758025.index
-2098848092.index
-2762063732.index
-3720681883.index
-2084021475.index
->>>>>>> 0ee03dbe53ae309115b80ee5fe7cf058c139098e
