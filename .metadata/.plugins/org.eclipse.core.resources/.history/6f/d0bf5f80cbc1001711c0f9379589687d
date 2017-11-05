@@ -1,0 +1,13 @@
+
+public class COMPSCI extends Major {
+
+	private AllCourses ac = new AllCourses();
+
+	//make a 2D array of requirements
+	public COMPSCI(){
+		
+	coreList.add(ac.getCS121());
+	
+
+	}
+}
