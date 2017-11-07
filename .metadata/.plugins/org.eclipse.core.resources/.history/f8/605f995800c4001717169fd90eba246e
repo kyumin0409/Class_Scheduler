@@ -72,7 +72,6 @@ public class FilterCourses {
 //				if (Arrays.equals(array, MW)){
 //					System.out.println("remove");
 //					it.remove();
-		//Maps need to be removed differently
 //				}
 //			}
 //			for (CourseNum key: coursesMap.keySet()){
