@@ -62,17 +62,13 @@ public class CourseSelectionPage  extends JPanel{
 		major.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
             	if (major.isSelected()){
             		filterValues[numMAJOR] = true;
             		System.out.println("major selected");
             	}
             	else
-            		filterValues[numMAJOR] = false;
-=======
                 filterValues[numMAJOR] = !filterValues[numMAJOR];
 
->>>>>>> origin/master
             }
         });
 		JCheckBox MWF = new JCheckBox("Mon, Wed, Fri");
@@ -118,9 +114,10 @@ public class CourseSelectionPage  extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
 		        showClassesPanel.removeAll();
+		        //filterCourses.removeAll();
 		        showClassesPanel.revalidate();
             	HashMap<CourseNum, Course> filteredCourseList = filterCourses.filterAll();
-            	System.out.println(filteredCourseList);
+            	System.out.println("filtered: " + filteredCourseList);
 		        for (CourseNum key : filteredCourseList.keySet()){
 		            	//iterate over key
 		        		CourseNum courseNum = key;
@@ -129,12 +126,9 @@ public class CourseSelectionPage  extends JPanel{
 		        		showClassesPanel.add(new CourseToDisplay(courseNum, course));
 		        		
 		        }
-<<<<<<< HEAD
 		        
-		        classListPane.revalidate();
-=======
+		        //classListPane.revalidate();
 		        showClassesPanel.revalidate();
->>>>>>> origin/master
             }
         });
 		
@@ -224,16 +218,8 @@ public class CourseSelectionPage  extends JPanel{
 	    //panel.add(component, 0,0 );
 	}**/
 	
-<<<<<<< HEAD
-	public boolean[] getFilterValues(){
-		
-		boolean[] array ={true, true, true, false, false};
-		
-		//return filterValues;
-		return array;
-=======
 	public boolean getFilterValues(int i){
+		
 		return filterValues[i];
->>>>>>> origin/master
 	}
 }

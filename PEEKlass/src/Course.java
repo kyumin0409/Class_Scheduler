@@ -20,7 +20,7 @@ public class Course {
 	private LocalTime endTime;
 	
 	//M,T,W,Th,F boolean array: true if any of these days are class day
-	private boolean[] day = new boolean[5];
+	private boolean[] day;
 	
 	public Course(CourseNum courseNum, String courseName, CourseNum prereq, LocalTime startTime, LocalTime endTime, boolean[] day){
 		
@@ -61,7 +61,8 @@ public class Course {
 	
 	public boolean[] getDay(){
 		
-		return day;
+		return this.day;
+		
 	}
 	
 	public boolean getIsCore(){

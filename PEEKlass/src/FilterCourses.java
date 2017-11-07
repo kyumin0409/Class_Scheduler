@@ -1,4 +1,8 @@
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 
 //filter depending on the boolean values taken from the GUI
 public class FilterCourses {
@@ -9,46 +13,38 @@ public class FilterCourses {
 	CourseSelectionPage cp;
 	People people = new People();
 	Person anthony;
-	private boolean[] MW = {true, false, true, false, false};
-	private boolean[] TTHU = {false, true, false, true, false};
+	private static boolean[] MW = {true, false, true, false, false}; 
+	private static boolean[] TTHU = {false, true, false, true, false};
 
 	//constructor
 	public FilterCourses(CourseSelectionPage cp){
-		this.cp = cp;
+		
+		//initialize course map to get all courses
 		coursesMap = allC.getAllCourses();
-		//get boolean array size of 5
-		//valueGUI = cp.getFilterValues();
-
+		//initialize the empty map
+		newMap = new HashMap<CourseNum, Course>(); System.out.println("new map create: " + newMap);
+		
+		this.cp = cp;
 		anthony= people.getAnthony();
 
 	}
 
 	//add person to parameter to not hard code 
 	public HashMap<CourseNum, Course> filterAll(){
-//		if (!cp.getFilterValues(0) && !cp.getFilterValues(1) && !cp.getFilterValues(2) && !cp.getFilterValues(3) && !cp.getFilterValues(4)){
-//			newMap = coursesMap;
-//		}
-
-		//{
+		
 			filterMajor(anthony);
 			filterDay(anthony);
-			filterNotTaken(anthony);
-			filterMeetsReq(anthony);
-		//}
-
+			//filterNotTaken(anthony);
+			//filterMeetsReq(anthony);
+			
 		return newMap;
 	}
 
 	private void filterMajor(Person person){
-		//if (valueGUI[0] == true){
 		
-		if (!cp.getFilterValues(0)){
-			newMap = coursesMap;
-		}
-
-		else{
-			//iterate coursesMap if any of the majors is equal to amy.getMajor() 
-<<<<<<< HEAD
+		System.out.println("major : " + cp.getFilterValues(0));
+		
+		if ( cp.getFilterValues(0) ){
 			
 		        //3 different ways to iterate over the map
 		        for (CourseNum key : coursesMap.keySet()){
@@ -57,43 +53,41 @@ public class FilterCourses {
 		        			newMap.put(key,coursesMap.get(key));
 		        		}
 		        }
-=======
-
-			//3 differents way to iterate over the map
-			for (CourseNum key : coursesMap.keySet()){
-				//iterate over key
-				if (key.getMajor().getMajorName().equals(anthony.getMajor().getMajorName())){
-					newMap.put(key,coursesMap.get(key));
-					System.out.println("major match");
-
-				}
-			}
->>>>>>> origin/master
+		}
+		else{
+			newMap = coursesMap;
 		}
 	}
 
 	private void filterDay(Person person){
 
-		if ( !cp.getFilterValues(1)){
-			//if it's not MW class, delete MW classes
-			for (CourseNum key: coursesMap.keySet()){
+//		if ( cp.getFilterValues(1) == false){
+//			//if it's not MW class, delete MW classes
+//			
+//			Iterator it = coursesMap.entrySet().iterator();
+//			while (it.hasNext()){
+//				
+//				Map.Entry pair = (Map.Entry) it.next();
+//				boolean[] array = ((Course) pair.getValue()).getDay();
+//				if (Arrays.equals(array, MW)){
+//					System.out.println("remove");
+//					it.remove();
+//				}
+//			}
+//			for (CourseNum key: coursesMap.keySet()){
+//				
+//				
+//			}
+//		}
 
-				if (coursesMap.get(key).getDay() == MW){
-					newMap.remove(key);
-				}
-			}
-		}
-<<<<<<< HEAD
-		
-		if ( !valueGUI[2]){
-=======
-
-		if (!cp.getFilterValues(2)){	
->>>>>>> origin/master
+		System.out.println("TTHU: " + cp.getFilterValues(2));
+	
+		if ( !cp.getFilterValues(2)){	
 			//if it's not TTHU class, delete TTHU classes
 			for (CourseNum key: coursesMap.keySet()){
 
-				if (coursesMap.get(key).getDay() == TTHU){
+				if (Arrays.equals(coursesMap.get(key).getDay(), TTHU)){
+					System.out.println("remove TTHU");
 					newMap.remove(key);
 				}
 			}
@@ -101,6 +95,9 @@ public class FilterCourses {
 	}
 
 	private void filterNotTaken(Person person){
+		
+
+		System.out.println("not taken: " + cp.getFilterValues(3));
 
 		if (cp.getFilterValues(3)){
 			//go through taken courses
@@ -117,6 +114,8 @@ public class FilterCourses {
 	}
 
 	private void filterMeetsReq(Person person){
+		
+		System.out.println("filter req: "+ cp.getFilterValues(4));
 
 		if (cp.getFilterValues(4)){
 			for (CourseNum key: newMap.keySet()){
@@ -126,6 +125,10 @@ public class FilterCourses {
 				}
 			}
 		}
+	}
+	
+	public void removeAll(){
+		newMap = new HashMap<CourseNum, Course>();
 	}
 
 }
