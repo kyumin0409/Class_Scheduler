@@ -67,8 +67,13 @@ public class CourseSelectionPage  extends JPanel{
             		System.out.println("major selected");
             	}
             	else
+<<<<<<< HEAD
                 filterValues[numMAJOR] = !filterValues[numMAJOR];
 
+=======
+            		filterValues[numMAJOR] = false;
+                filterValues[numMAJOR] = !filterValues[numMAJOR];
+>>>>>>> origin/master
             }
         });
 		JCheckBox MWF = new JCheckBox("Mon, Wed, Fri");
@@ -125,9 +130,14 @@ public class CourseSelectionPage  extends JPanel{
 		        		//JPanel eachCourse = new CourseToDisplay(courseNum, course);
 		        		showClassesPanel.add(new CourseToDisplay(courseNum, course));
 		        		
+<<<<<<< HEAD
 		        }
 		        
 		        //classListPane.revalidate();
+=======
+		        }		        
+		       // classListPane.revalidate();
+>>>>>>> origin/master
 		        showClassesPanel.revalidate();
             }
         });
@@ -154,6 +164,7 @@ public class CourseSelectionPage  extends JPanel{
 		//classListPane = new JScrollPane(showClassesPanel);
 		return showClassesPanel;
 	}
+	
 	
 	//center right panel showing class grid
 	public JPanel showGridPanel(){

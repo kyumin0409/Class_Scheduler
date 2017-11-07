@@ -42,9 +42,18 @@ public class FilterCourses {
 
 	private void filterMajor(Person person){
 		
+<<<<<<< HEAD
 		System.out.println("major : " + cp.getFilterValues(0));
 		
 		if ( cp.getFilterValues(0) ){
+=======
+		if (!cp.getFilterValues(0)){
+			newMap = coursesMap;
+		}
+
+		else{
+			//iterate coursesMap if any of the majors is equal to amy.getMajor() 
+>>>>>>> origin/master
 			
 		        //3 different ways to iterate over the map
 		        for (CourseNum key : coursesMap.keySet()){
@@ -53,14 +62,18 @@ public class FilterCourses {
 		        			newMap.put(key,coursesMap.get(key));
 		        		}
 		        }
+<<<<<<< HEAD
 		}
 		else{
 			newMap = coursesMap;
+=======
+>>>>>>> origin/master
 		}
 	}
 
 	private void filterDay(Person person){
 
+<<<<<<< HEAD
 //		if ( cp.getFilterValues(1) == false){
 //			//if it's not MW class, delete MW classes
 //			
@@ -84,6 +97,18 @@ public class FilterCourses {
 		System.out.println("TTHU: " + cp.getFilterValues(2));
 	
 		if ( !cp.getFilterValues(2)){	
+=======
+		if ( !cp.getFilterValues(1)){
+			//if it's not MW class, delete MW classes
+			for (CourseNum key: coursesMap.keySet()){
+
+				if (coursesMap.get(key).getDay() == MW){
+					newMap.remove(key);
+				}
+			}
+		}
+		if (!cp.getFilterValues(2)){	
+>>>>>>> origin/master
 			//if it's not TTHU class, delete TTHU classes
 			for (CourseNum key: coursesMap.keySet()){
 
