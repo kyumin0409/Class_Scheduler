@@ -48,7 +48,6 @@ public class FilterCourses {
 
 		else{
 			//iterate coursesMap if any of the majors is equal to amy.getMajor() 
-<<<<<<< HEAD
 			
 		        //3 different ways to iterate over the map
 		        for (CourseNum key : coursesMap.keySet()){
@@ -57,18 +56,6 @@ public class FilterCourses {
 		        			newMap.put(key,coursesMap.get(key));
 		        		}
 		        }
-=======
-
-			//3 differents way to iterate over the map
-			for (CourseNum key : coursesMap.keySet()){
-				//iterate over key
-				if (key.getMajor().getMajorName().equals(anthony.getMajor().getMajorName())){
-					newMap.put(key,coursesMap.get(key));
-					System.out.println("major match");
-
-				}
-			}
->>>>>>> origin/master
 		}
 	}
 
@@ -83,13 +70,7 @@ public class FilterCourses {
 				}
 			}
 		}
-<<<<<<< HEAD
-		
-		if ( !valueGUI[2]){
-=======
-
 		if (!cp.getFilterValues(2)){	
->>>>>>> origin/master
 			//if it's not TTHU class, delete TTHU classes
 			for (CourseNum key: coursesMap.keySet()){
 
